@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+
+
+ {% for atividade in object_list %}
+
+    <h1> {{ atividade }}</h1>
+
+{% endfor %}
+
+<form class="form-control" method="post">
+    {% csrf_token %}
+    {{ form }}
+        <button type="submit" class="btn btn-secondary">Gravar</button>
+</form>
+
+
+
+
+
+
+
+{% endblock %}

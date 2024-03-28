@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+
+<p class="fs-1 text-center">Mensalidade</p>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand">Lista de Alunos</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'criar_mensalide' %}">Nova Mensalidade</a>
+                </li>
+                <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gerir mensalidades
+          </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">Mensalidade por aluno</a></li>
+                    <li><a href="#" class="dropdown-item">Mensaliades em atraso</a></li>
+                    <li><a href="{% url 'update_escola' user.utilizador.escola.id  %}" class="dropdown-item">Alterar valor Mensalidade</a></li>
+
+                </ul>
+
+            </ul>
+
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-info" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container text-center mt-5">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form method="GET" class="form-container d-flex align-items-center"> <!-- Adicione a classe d-flex e justify-content-start -->
+                <div class="d-flex flex-column ms-3">
+                    <label>Mês</label>
+                    <select id="mes" name="mes" class="form-select form-select-sm mb-3" aria-label="Small select example" onchange="salvarValorSelecionado()">
+                        {% for mes in meses %}
+                            <option value="{{ mes }}">{{ mes }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="d-flex flex-column ms-3"> <!-- Adicione margem à esquerda para separar os selects -->
+                    <label for="ano">Ano letivo</label>
+                    <select id="ano" name="ano" class="form-select form-select-sm mb-3" aria-label="Small select example">
+                        {% for ano in anos_letivos %}
+                            <option value="{{ano}}">{{ano}}/{{ano|add:1}}</option>
+                        {% endfor %}
+                    </select>
+
+                </div>
+                <button type="submit" class="btn btn-info ms-3 ">Filtrar</button>
+                 <!-- Adicione margem à esquerda para separar o botão -->
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="dgv">
+    <div class="resultado">
+        <div class="titulos">
+            <div class="titulo c1">ID</div>
+            <div class="titulo c2">Nome</div>
+            <div class="titulo c3">Mês</div>
+            <div class="titulo c4">Ano</div>
+            <div class="titulo c5">Pago</div>
+            <div class="titulo c5"></div>
+        </div>
+
+
+        {% for mensalidade in mensalidades %}
+
+        <div class="dados">
+            <div class="linhadados">
+                <div class="coluna c1">{{ mensalidade.aluno.id }}</div>
+
+                <div class="coluna c2">{{ mensalidade.aluno.nome }}</div>
+
+                <div class="coluna c3">{{ mensalidade.mes}}</div>
+                <div class="coluna c4">{{ mensalidade.ano }}</div>
+                <div class="coluna c5">
+                    <input type="checkbox" id="paga-{{ mensalidade.id }}" onchange="atualizarMensalidade('{{ mensalidade.id }}')" {% if mensalidade.paga%}checked{%endif%} >
+                </div>
+
+                <div class="coluna c6">{{ mensalidade.id}}</div>
+
+
+
+
+            </div>
+            {% endfor %}
+        </div>
+
+
+        </div>
+
+
+
+
+        <script>
+        
+            // Função para obter o valor de um cookie pelo nome
+            function getCookie(name) {
+                var cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    var cookies = document.cookie.split(';');
+                    for (var i = 0; i < cookies.length; i++) {
+                        var cookie = cookies[i].trim();
+                        // Verifique se este cookie é o cookie de token CSRF
+                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+        
+            // Função para atualizar o estado do checkbox
+            function atualizarMensalidade(mensalidadeId) {
+                var checkbox = document.getElementById('paga-' + mensalidadeId);
+                if (checkbox) {
+                    var paga = checkbox.checked;
+        
+                    // Obtenha o token CSRF do cookie
+                    var csrfToken = getCookie('csrftoken');
+                    if (csrfToken) { // Verifique se o token CSRF está definido
+                        // Crie uma instância de XMLHttpRequest
+                        var xhr = new XMLHttpRequest();
+                        xhr.open('POST', '/escolas/atualizarMensalidadeAluno/' + mensalidadeId + '/');
+                        xhr.setRequestHeader('Content-Type', 'application/json');
+                        xhr.setRequestHeader('X-CSRFToken', csrfToken); // Adicione o token CSRF ao cabeçalho
+        
+                        // Defina a função de tratamento do evento onload
+                        xhr.onload = function() {
+                            if (xhr.status === 200) {
+                                console.log('Mensalidade atualizada com sucesso!');
+                            } else {
+                                console.error('Erro ao atualizar a mensalidade:', xhr.statusText);
+                            }
+                        };
+        
+                        // Envie a solicitação com os dados JSON
+                        xhr.send(JSON.stringify({ paga: paga }));
+                    } else {
+                        console.error('Token CSRF não encontrado.');
+                    }
+                } else {
+                    console.error('Elemento do checkbox não encontrado.');
+                }
+            }
+
+            function salvarValorSelecionado(){
+                var dataAtual = new Date();
+                var mes_atual = mesesEmPortugues[dataAtual.getMonth()];
+                console.log(mes_atual)
+                var ano_atual = dataAtual.getFullYear()
+                var inicioAnoLetivo = obterAnoLetivo(mes_atual,ano_atual)
+                
+                var select_mes = document.getElementById('mes')
+                var select_ano = document.getElementById('ano')
+                var valor_selecionado_mes = select_mes.value;
+                var valor_selecionado_ano = select_ano.value;
+            
+                localStorage.setItem('valor_selecionado_mes', valor_selecionado_mes)
+                localStorage.setItem('valor_selecionado_ano', valor_selecionado_ano)
+                select_ano.value = inicioAnoLetivo
+                select_mes.value =  mes_atual
+            }
+
+            window.onload = function(){
+                var valor_salvo_mes = localStorage.getItem('valor_selecionado_mes')
+                var valor_salvo_ano = localStorage.getItem('valor_selecionado_ano')
+
+                if (valor_salvo_mes){
+                    var select_mes = document.getElementById('mes')
+                    select_mes.value = valor_salvo_mes
+                }
+                if (valor_salvo_ano){
+                    var select_ano = document.getElementById('ano')
+                    select_mes.value = valor_salvo_ano
+                }
+            }
+
+        
+            
+            
+        function obterAnoLetivo(mes, ano){
+                if (mes < 8){
+                    return ano -= 1
+                }else {
+                    return ano
+                }
+        }
+
+        var mesesEmPortugues = [
+            "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+            "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+            ] 
+        </script>
+
+{% endblock %}

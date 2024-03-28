@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title_menu %}
+{% endblock %}
+
+{% block main %}
+
+
+<div class="container mt-5" >
+    <div class="row">
+        <div class="col ms-5">
+            <a href="{% url 'aluno_new' %}" class="btn btn-info me-4">Novo Aluno</a>
+            <a href="{% url 'atividades_list' %}" class="btn btn-info me-4">Atividades</a>
+
+        </div>
+        <div class="col"></div>
+        <div class="col">
+            <div class="d-flex justify-content-end">
+        <form method="GET" action="{% url 'alunos_list' %}">
+    <input type="text" name="query" value="{{ query }}" placeholder="Pesquisar aluno">
+    <button type="submit" class="btn btn-info">Pesquisar</button>
+</form>
+    </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<div class="dgv">
+    <div class="resultado">
+        <div class="titulos">
+            <div class="titulo c1">ID</div>
+            <div class="titulo c2">Nome</div>
+            <div class="titulo c3">Ano Matrícula</div>
+            <div class="titulo c4">Ano Termo</div>
+            <div class="titulo c5">Atividades</div>
+            <div class="titulo c6">Operações</div>
+        </div>
+
+
+
+        {% for aluno in object_list %}
+
+       
+        <div class="dados">
+            <div class="linhadados">
+                <div class="coluna c1">{{ aluno.id }}</div>
+                <div class="coluna c2">{{ aluno.nome }}</div>
+                <div class="coluna c3">{{ aluno.ano_matricula }}</div>
+                <div class="coluna c4">{% if aluno.ano_saida %}
+                    {{ aluno.ano_saida }}
+                    {% else %}
+
+                    {% endif %}
+                </div>
+                <div class="coluna c5">
+                    {% if aluno.atividade %}
+                    {% for atividade in aluno.atividade.nome %}
+                          {{ atividade }}
+                    {% if not forloop.last.last %}| {% endif%}
+                    {% endfor %}
+                    {% else  %}
+
+                    {% endif %}
+
+                     </div>
+                <div class="coluna c6">
+                    <div>
+                <a onclick="exibirPopUPConfirmacao({{ aluno.id }}, '{{ aluno.nome }}');">
+                    <img src="{% static 'images/delete.svg' %}"></a>
+                        <a href="{% url 'aluno_edit' aluno.id %}"><img src="{% static 'images/edit.svg' %}"></a>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+        {% endfor %}
+
+
+
+    </div>
+</div>
+<script>
+function exibirPopUPConfirmacao(id, nome) {
+    if (confirm("Tem a certeza que pretende eliminar " + nome + "?")) {
+        window.location.href = "/alunos/eliminar/" + id + "/";
+    }
+}
+</script>
+
+
+
+{% endblock %}

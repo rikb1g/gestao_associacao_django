@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<div class="container text-center mt-5">
+    <div class="row">
+
+    <div class="col"></div>
+    <div class="col mt-5">
+        <div class="text-bg-light p-3">
+            {% if object %}
+            <h2>Editar Aluno</h2>
+            {% else %}
+            <h2>Novo Aluno</h2>
+            {% endif %}
+        </div>
+
+<form method="post" id="aluno-form" class="form-control">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" class="btn btn-secondary">Gravar Aluno</button>
+</form>
+
+
+
+{% endblock %}

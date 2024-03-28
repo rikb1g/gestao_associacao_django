@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+
+
+<form method="post" class="mt-5 form-control">
+    {% csrf_token %}
+        {{ form }}
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+
+<h1 class="text-center">Mensalidades Atuais</h1>
+
+<div class="dgv">
+    <div class="resultado">
+        <div class="titulos">
+            <div class="titulo ca1">ID</div>
+            <div class="titulo ca2">Nome</div>
+            <div class="titulo ca3">Valor</div>
+            <div class="titulo ca4">Nº alunos</div>
+            <div class="titulo ca5">Operações</div>
+        </div>
+
+
+
+
+    {% for mensalidade in mensalidades %}
+<div class="dados">
+    <div class="linhadados">
+        <div class="coluna ca1">{{ mensalidade.id }}</div>
+        <div class="coluna ca2">{{ mensalidade.nome }}</div>
+        <div class="coluna ca3">{{ mensalidade.valor }}</div>
+        <div class="coluna ca4">{{ mensalidade.contar_alunos }}</div>
+        <div class="coluna ca5">
+            <a onclick="exibirPopUpConfirmacaoMensa({{mensalidade.id}}, '{{mensalidade.nome}}');"><img src="{% static 'images/delete.svg' %}" alt="eliminar"></a>
+            <a href="{% url 'mensalidade_base_update' mensalidade.id %}"><img src="{% static 'images/edit.svg' %}" alt="editar"></a>
+        </div>
+    </div>
+
+</div>
+        {% endfor %}
+</div>
+    <a href="{% url 'criar_mensalide' %}" class="btn btn-info">Nova Mensalidade</a>
+</div>
+
+<br>
+
+
+
+
+<script>
+    function exibirPopUpConfirmacaoMensa(id,nome) {
+    if (confirm("Tem a certeza que pretende eliminar a mensalidade "+ nome + "?")){
+       window.location.href = "/escolas/removerMensalidade/" + id + "/";
+    }
+  }
+</script>
+
+
+
+{% endblock %}

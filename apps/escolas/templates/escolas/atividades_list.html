@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+
+<div class="container mt-5" >
+    <div class="row">
+        <div class="col ms-5">
+            <a href="{% url 'aluno_new' %}" class="btn btn-info me-4">Novo Aluno</a>
+            <a href="{% url 'atividades_list' %}" class="btn btn-info me-4">Atividades</a>
+
+        </div>
+        <div class="col"></div>
+        <div class="col">
+            <div class="d-flex justify-content-end">
+        <form method="GET" action="{% url 'atividades_list' %}">
+    <input type="text" name="query_atividades" value="{{ query_atividades }}" placeholder="Pesquisar atividade">
+    <button type="submit" class="btn btn-info">Pesquisar</button>
+</form>
+    </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+<div class="dgv">
+    <div class="resultado">
+        <div class="titulos">
+            <div class="titulo ca1">ID</div>
+            <div class="titulo ca2">Nome</div>
+            <div class="titulo ca3">Escola</div>
+            <div class="titulo ca4">Nº inscritos</div>
+            <div class="titulo ca5">Operaçoes</div>
+        </div>
+
+        {% for atividade in atividades %}
+
+
+
+        <div class="dados">
+            <div class="linhadados">
+                <div class="coluna ca1">{{ atividade.id }}</div>
+                <div class="coluna ca2">{{ atividade.nome }}</div>
+                <div class="coluna ca3">{{ atividade.escola }}</div>
+                <div class="coluna ca4">{{ atividade.contar_alunos }}</div>
+                <div class="coluna ca5">
+                    <div>
+                        <a href="#" onclick="exibirPopUPConfirmacaoAtividade({{ atividade.id }}, '{{ atividade.nome }}');"> <img src="{% static 'images/delete.svg' %}"></a>
+                        <a href="{% url 'atividade_update' atividade.id %}"><img src="{% static 'images/edit.svg' %}"></a>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        {% endfor %}
+
+        </div>
+
+</div>
+
+     <div class="container mt-5">
+
+            <div class="row">
+                <div class="col ms-4">
+                <a href="{% url 'atividade_new' %}" class="btn btn-info me-4">Nova Atividade</a>
+                </div>
+            </div>
+        </div>
+
+
+</div>
+
+<script>
+function exibirPopUPConfirmacaoAtividade(id, atividade) {
+    console.log("Sucesso")
+    if (confirm("Tem a certeza que pretende eliminar a atividade de " + atividade + "?")) {
+        window.location.href = "/alunos/removerAtividade/" + id + "/";
+    }
+}
+</script>
+
+{% endblock %}
+

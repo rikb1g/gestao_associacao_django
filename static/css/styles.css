@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* INDEX.html */
+.align-right{
+    text-align: right;
+    padding-left: 150px;
+}
+.btn-main{
+}
+
+/* estudantes lista */
+
+
+.dgv{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 15px;
+
+
+}
+.resultado{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 1200px;
+
+
+}
+.titulo{
+    border-right: 1px solid #ddd;
+}
+
+.titulos{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    width: inherit;
+    background-color: #248;
+    color: #fff;
+
+
+}
+.dados{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: inherit;
+
+}
+
+.linhadados{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: inherit;
+    background-color: #d6d6d6;
+}
+
+.c1{
+    width: 5%;
+}
+.c2{
+    width: 40%;
+}
+.c3{
+    width: 10%;
+}
+.c4{
+    width: 10%;
+}
+.c5{
+    width: 20%;
+}
+.c6{
+    width: 15%;
+}
+
+/* atividades */
+.ca1{
+    width: 10%;
+}
+.ca2{
+    width: 30%;
+}
+.ca3{
+    width: 30%;
+}
+.ca4{
+    width: 20%;
+}
+.ca5 {
+    width:5%
+}

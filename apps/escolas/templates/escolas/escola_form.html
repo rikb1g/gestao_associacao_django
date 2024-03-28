@@ -2,9 +2,27 @@
 
 {% block main %}
 
-{% csrf_token %}
-{{ form }}
+<div class="container">
 
-<button type="submit">Salvar</button>
+    <form method="post" class="mt-5 form-control">
+        {% if objects %}
+        <p>Editar Nome</p>
+        {% else %}
+        <p>Nova escola</p>
+        {% endif %}
+    {% csrf_token %}
+        {{ form }}
+    <button type="submit" class="btn btn-success mt-2">Salvar</button>
+
+
+    </form>
+    {% if objects %}
+    <a href="{% url 'criar_mensalide' %}" class="btn btn-secondary">Nova Mensalidade</a>
+
+    {% else %}
+
+    {% endif %}
+
+</div>
 
 {% endblock %}
