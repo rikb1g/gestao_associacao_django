@@ -43,7 +43,7 @@
 
 
 
-        {% for aluno in object_list %}
+        {% for aluno in alunos_list %}
 
        
         <div class="dados">
@@ -58,21 +58,21 @@
                     {% endif %}
                 </div>
                 <div class="coluna c5">
-                    {% if aluno.atividade %}
-                    {% for atividade in aluno.atividade.nome %}
-                          {{ atividade }}
-                    {% if not forloop.last.last %}| {% endif%}
+                    {% if aluno.atividade.all %}
+                    {% for atividade in aluno.atividade.all %}
+                          {{ atividade.nome }}
+                          |
                     {% endfor %}
                     {% else  %}
 
                     {% endif %}
-
-                     </div>
+                </div>
                 <div class="coluna c6">
                     <div>
-                <a onclick="exibirPopUPConfirmacao({{ aluno.id }}, '{{ aluno.nome }}');">
+                <a onclick="exibirPopUPConfirmacao('{{ aluno.id }}', '{{ aluno.nome }}');">
                     <img src="{% static 'images/delete.svg' %}"></a>
                         <a href="{% url 'aluno_edit' aluno.id %}"><img src="{% static 'images/edit.svg' %}"></a>
+                
                     </div>
 
                 </div>

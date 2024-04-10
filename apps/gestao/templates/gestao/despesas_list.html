@@ -1,27 +1,28 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block main %}
 
 
-<p class="fs-1 text-center">Mensalidade</p>
+<p class="fs-1 text-center">Despesas</p>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a href="#" class="navbar-brand">Lista de Alunos</a>
+        <a href="#" class="navbar-brand">Lista de Despesas Mensais</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'criar_mensalide' %}">Nova Mensalidade</a>
+                    <a class="nav-link active" href="{% url 'despesas_create' %}">Nova despesa</a>
                 </li>
                 <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gerir mensalidades
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gerir Despesas
           </a>
                 <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item">Mensalidade por aluno</a></li>
-                    <li><a href="#" class="dropdown-item">Mensaliades em atraso</a></li>
-                    <li><a href="{% url 'update_escola' user.utilizador.escola.id  %}" class="dropdown-item">Alterar valor Mensalidade</a></li>
+                    <li><a href="{% url 'tipo_despesa_create' %}" class="dropdown-item">Inserir tipo</li>
+                    <li><a href="#  " class="dropdown-item">Remover tipo</li>
+                    <li><a href="#" class="dropdown-item">Relatórios</a></li>
 
                 </ul>
 
@@ -34,6 +35,7 @@
         </div>
     </div>
 </nav>
+
 
 <div class="container text-center mt-5">
     <div class="row">
@@ -70,41 +72,51 @@
 <div class="dgv">
     <div class="resultado">
         <div class="titulos">
-            <div class="titulo c1">ID</div>
-            <div class="titulo c2">Nome</div>
-            <div class="titulo c3">Mês</div>
-            <div class="titulo c4">Ano</div>
-            <div class="titulo c5">Pago</div>
-            <div class="titulo c5"></div>
+            <div class="titulo cd1">ID</div>
+            <div class="titulo cd2">Tipo</div>
+            <div class="titulo cd3">Fatura</div>
+            <div class="titulo cd4">Descrição</div>
+            <div class="titulo cd5">Descrição</div>
+            <div class="titulo cd6">Valor</div>
+            <div class="titulo cd7">Operações</div>
         </div>
-
-
-        {% for mensalidade in mensalidades %}
-
+            {% for despesa in despesas_list %}
         <div class="dados">
             <div class="linhadados">
-                <div class="coluna c1">{{ mensalidade.aluno.id }}</div>
-
-                <div class="coluna c2">{{ mensalidade.aluno.nome }}</div>
-
-                <div class="coluna c3">{{ mensalidade.mes}}</div>
-                <div class="coluna c4">{{ mensalidade.ano }}</div>
-                <div class="coluna c5">
-                    <input type="checkbox" id="paga-{{ mensalidade.id }}" onchange="atualizarMensalidade('{{ mensalidade.id }}')" {% if mensalidade.paga%}checked{%endif%} >
+                <div class="coluna cd1">{{despesa.id}}</div>
+                <div class="coluna cd2">{{despesa.tipo}}</div>
+                <div class="coluna cd3">{{despesa.fatura}}</div>
+                <div class="coluna cd4">{{despesa.descricao}}</div>
+                <div class="coluna cd5">{{despesa.data.day}}/{{despesa.data.month}}/{{despesa.data.year}}</div>
+                <div class="coluna cd6">{{despesa.valor}}</div>
+                <div class="coluna cd7">
+                    <div>
+                        <a onclick="exibirPopUPConfirmacao('{{despesa.id}}','{{despesa.descricao}}')"><img src="{% static 'images/delete.svg' %}" alt="eliminar"></a>
+                        <a href="#"><img src="{% static 'images/edit.svg' %}" alt="editar"></a>
+                    </div>
                 </div>
 
-                <div class="coluna c6">{{ mensalidade.id}}</div>
-
-
-
-
+                </div>
             </div>
+            
             {% endfor %}
+            <p>total</p> <p>{{ total_despesa}}</p>
         </div>
+    </div>
 
 
-        </div>
-        <script src="{% static '/js/mensalidadepagamento.js' %}"></script>
-        {% endblock %}
+</div>
 
 
+<script>
+function exibirPopUPConfirmacao(id, nome){
+    if (confirm("Tem a certeza que pretende eliminar "+ nome+" ?")){
+        window.location.href="/gestaoFinanceira/eliminarDespesa/"+id+"/"
+        
+    }
+}
+
+</script>
+
+
+{% endblock %}

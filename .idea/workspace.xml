@@ -5,26 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e944f2f4-2aab-4901-8b19-ba25125d700d" name="Changes" comment="~">
-      <change afterPath="$PROJECT_DIR$/apps/escolas/templates/escolas/atividades_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/escolas/templates/escolas/atividades_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/escolas/templates/escolas/mensalidade_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/escolas/templates/mensalidadePagamento/mensalidadepagamento_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/escolas/templates/mensalidade_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/estudantes/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/estudantes/signals.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/estudantes/templates/estudantes/aluno_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/remove.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/staticfiles/images/delete.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/gestao/templates/gestao/tipodespesa_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/mensalidadepagamento.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/js/mensalidadepagamento.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/core/templates/core/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/core/templates/core/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/core/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/core/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/escolas/templates/escolas/escola_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/templates/escolas/escola_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/escolas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/escolas/templates/mensalidadePagamento/mensalidadepagamento_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/templates/mensalidadePagamento/mensalidadepagamento_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/escolas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/escolas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/estudantes/templates/estudantes/aluno_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/templates/estudantes/aluno_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/estudantes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gestao/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gestao/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gestao/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gestao/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/associacao/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/associacao/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/associacao/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/associacao/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/media/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/staticfiles/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
@@ -46,6 +44,9 @@
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -66,7 +67,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/ricardosousa/Desktop/django/Associacao/django_assoc/staticfiles&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;promo.javascript&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -185,16 +186,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/apps/escolas/views.py</url>
-          <line>120</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

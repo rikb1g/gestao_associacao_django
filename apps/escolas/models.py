@@ -43,9 +43,7 @@ class Atividades(models.Model):
     def contar_alunos(self):
         return self.aluno_set.count()
 
-    class Meta:
-        verbose_name = "Atividade"
-        verbose_name_plural = "Atividades"
+    
 
 
 

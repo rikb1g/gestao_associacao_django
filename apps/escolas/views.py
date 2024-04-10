@@ -42,6 +42,7 @@ class EditEscola(UpdateView):
 class CreateMensalidade(CreateView):
     model = Mensalidade
     fields = ['nome', 'valor']
+    success_url = 'mensalidade_list'
 
     def form_valid(self, form):
         mensalidade = form.save(commit= False)
@@ -51,17 +52,24 @@ class CreateMensalidade(CreateView):
 
     def form_invalid(self, form):
         return self.render_to_response(self.get_context_data(form=form))
+    
+    def get_absolute_url(self):
+        redirect('mensalidade_list')
 
 
 class CreateAtividade(CreateView):
     model = Atividades
     fields = ['nome', 'valor']
+    success_url = 'atividades_list'
 
     def form_valid(self, form):
         atividade = form.save(commit=False)
         atividade.escola = self.request.user.utilizador.escola
         atividade.save()
         return super(CreateAtividade,self).form_valid(form)
+    
+    def get_absolute_url(self):
+        redirect('alunos_list')
 
 class AtividadesList(ListView):
     model = Atividades
@@ -86,6 +94,7 @@ class AtividadesList(ListView):
 class AtividadeNew(CreateView):
     model = Atividades
     fields = ['nome','valor']
+    success_url = 'atividades_list'
 
     def form_valid(self, form):
         atividade = form.save(commit=False)
@@ -148,7 +157,7 @@ class MensalidadeList(ListView):
         if ano_selecionado and mes_selecionado:
             return MensalidadePagamento.objects.filter(mes= mes_selecionado, ano= ano_selecionado)
         else:
-            return MensalidadePagamento.objects.filter(mes= mes_atual)
+            return MensalidadePagamento.objects.filter(mes= mes_atual, ano = ano_atual)
 
 
 
@@ -165,28 +174,6 @@ class MensalidadeList(ListView):
         return context
 
 
-class MensalidadeCreate(CreateView):
-    model = Mensalidade
-    fields = ['aluno', 'valor']
-    success_url = reverse_lazy('mensalidade_list')
-
-
-    def form_valid(self, form):
-
-        aluno = form.cleaned_data['aluno']
-        if Mensalidade.objects.filter(aluno= aluno).exists():
-            messages.error(self.request, f"fO aluno {aluno} já tem uma mensalidade definida!")
-            return self.form_invalid(form)
-        else:
-            form.instance.creator = self.request.user
-            return super().form_valid(form)
-
-    def form_invalid(self, form):
-        return self.render_to_response(self.get_context_data(form=form))
-
-    def get_absolute_url(self):
-        return reverse_lazy('mensalidade_list')
-
 
 class MensaliadeEdit(UpdateView):
     model = Mensalidade
@@ -197,7 +184,7 @@ class MensaliadeEdit(UpdateView):
 def remover_mensalidade(request, pk):
     mensalidade_eliminar = get_object_or_404(Mensalidade, pk=pk)
     mensalidade_eliminar.delete()
-    return reverse_lazy('update_escola')
+    return redirect('mensalidade_list')
 
 
 

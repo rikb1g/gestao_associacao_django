@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+
+<div class="container text-center">
+    <p>Nova despesa</p>
+<form method="post" class="form-control" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-secondary">Gravar despesa</button>
+
+</form>
+
+</div>
+
+   
+
+
+
+
+
+
+
+{% endblock %}

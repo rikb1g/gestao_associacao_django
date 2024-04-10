@@ -9,6 +9,7 @@ from django.views.generic import ListView, UpdateView,CreateView, DetailView
 class AlunoList(ListView):
     model = Aluno
     template_name = 'aluno_list.html'
+    context_object_name = 'alunos_list'
 
     def get_queryset(self):
         query = self.request.GET.get('query')
