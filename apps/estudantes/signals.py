@@ -7,7 +7,6 @@ from datetime import datetime
 
 @receiver(post_save, sender=Aluno)
 def criar_mensalidade(sender, instance, created, **Kwargs):
-    print("teste")
     if created:
         ano_inicio = ano_civil(datetime.now())
         num_mensalidade = 12

@@ -8,8 +8,9 @@ from django.db.models import Sum
 import os
 
 
-class TipoReceita(models.Model):
+class TipoEntrada(models.Model):
     nome = models.CharField(max_length= 100)
+    escola = models.ForeignKey(Escola,on_delete= models.CASCADE)
 
     def __str__(self) -> str:
         return self.nome
@@ -17,6 +18,7 @@ class TipoReceita(models.Model):
 
 class TipoDespesa(models.Model):
     nome = models.CharField(max_length=100)
+    escola = models.ForeignKey(Escola,on_delete= models.CASCADE)
 
 
     def __str__(self) -> str:
@@ -41,7 +43,7 @@ class Despesas(models.Model):
     
     @classmethod
     def total_despesa_mensal(cls, escola, mes, ano):
-        return cls.objects.filter(escola =escola).aggregate(total=Sum('valor')['total']) or 0
+        return cls.objects.filter(escola =escola,data__month= mes, data__year=ano).aggregate(total=Sum('valor'))['total'] or 0
     
     @classmethod
     def total_despesa(cls, escola):
@@ -53,9 +55,8 @@ def delete_file_on_post_delete(sender, instance, **kwargs):
         if os.path.isfile(instance.ficheiro.path):
             os.remove(instance.ficheiro.path)
 
-class Receita(models.Model):
-    tipo = models.ForeignKey(TipoReceita,on_delete=models.CASCADE)
-    fatura = models.CharField(max_length=50, blank=True, null=True)
+class Entradas(models.Model):
+    tipo = models.ForeignKey(TipoEntrada,on_delete=models.CASCADE)
     ficheiro = models.FileField(blank=True)
     descricao = models.CharField(max_length=100, blank=True, null=True)
     valor = models.DecimalField(max_digits=10, decimal_places=2, validators=[MinValueValidator(0.00)])
@@ -70,7 +71,7 @@ class Receita(models.Model):
     
     @classmethod
     def total_receita_mensal(cls, escola, mes, ano):
-        return cls.objects.filter(escola =escola, mes=mes, ano=ano).aggregate(total=Sum('valor')['total']) or 0
+        return cls.objects.filter(escola =escola,data__month= mes, data__year=ano).aggregate(total=Sum('valor'))['total'] or 0
     
     @classmethod
     def total_receita(cls, escola):

@@ -32,6 +32,7 @@
 
 
 }
+
 .titulo{
     border-right: 1px solid #ddd;
 }
@@ -126,4 +127,24 @@
     width: 20%;
 }
 
+/*  tipo despesa*/
 
+.resultadoat {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 600px;
+}
+
+.ct1{
+    width: 20%;
+}
+
+.ct2 {
+    width: 60%;
+}
+
+.ct3 {
+    width: 20%;
+}

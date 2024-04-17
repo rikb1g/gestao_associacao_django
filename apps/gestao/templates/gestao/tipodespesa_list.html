@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block main %}
+
+<div class="container text-center">
+
+    <p class="mt-5">Lista de tipos de despesa</p>
+
+    <div class="dgv">
+        <div class="resultadoat mt-3">
+            <div class="titulos">
+                <div class="titulo ct1">ID</div>
+                <div class="titulo ct2">Nome</div>
+                <div class="titulo ct3">Operações</div>
+            </div>
+            {% for tipo in tipo_despesas %}
+            <div class="dados">
+                <div class="linhadados">
+                    <div class="coluna ct1">{{ tipo.id }}</div>
+                    <div class="coluna ct2">{{ tipo.nome }}</div>
+                    <div class="coluna ct3">
+                        <div>
+                            <a onclick="exibirPopUPConfirmacao('{{tipo.id}}','{{tipo.nome}}')"><img
+                                    src="{% static 'images/delete.svg' %}" alt="eliminar"></a>
+                            <a href="{% url 'tipo_despesas_edit' tipo.id %}"><img src="{% static 'images/edit.svg' %}" alt="editar"></a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+</div>
+</div>
+<script>
+    function exibirPopUPConfirmacao(id, nome) {
+        if (confirm(
+            "Tem a certeza que pretende eliminar o tipo " + nome + " ?"
+        )) {
+            window.location.href = "/gestaoFinanceira/TipoDespesaDelete/" + id + "/"
+        }
+    }
+</script>
+
+{% endblock %}

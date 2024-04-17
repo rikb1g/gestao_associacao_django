@@ -155,9 +155,9 @@ class MensalidadeList(ListView):
             pass
 
         if ano_selecionado and mes_selecionado:
-            return MensalidadePagamento.objects.filter(mes= mes_selecionado, ano= ano_selecionado)
+            return MensalidadePagamento.objects.filter(escola= escola,mes= mes_selecionado, ano= ano_selecionado)
         else:
-            return MensalidadePagamento.objects.filter(mes= mes_atual, ano = ano_atual)
+            return MensalidadePagamento.objects.filter(escola= escola,mes= mes_atual, ano = ano_atual)
 
 
 
@@ -201,6 +201,7 @@ def atualizar_mensalidade_aluno(request, mensalidade_id):
         paga = data.get('paga')
         if paga is not None:
             mensalidade = MensalidadePagamento.objects.get(pk=mensalidade_id)
+            mensalidade.escola = request.user.utilizador.escola
             mensalidade.paga = paga
             mensalidade.save()
             return JsonResponse({'mensagem': 'Mensalidade atualizada com sucesso'})
