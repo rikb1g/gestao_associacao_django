@@ -19,6 +19,4 @@ urlpatterns = [
     path('TipoEntradasEdit/<int:pk>/', TipoEntradaEdit.as_view(), name= 'tipo_entradas_edit'),
     path('TipoEntradasNew/', TipoEntradaCreate.as_view(), name= 'tipo_entradas_create'),
     path('TipoEntradasDelete/<int:pk>/', tipo_entradas_delete, name= 'tipo_entradas_delete'),
-
-
 ]

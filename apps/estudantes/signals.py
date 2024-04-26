@@ -16,8 +16,9 @@ def criar_mensalidade(sender, instance, created, **Kwargs):
             mes_atual = mes_ano[1] + 1
             ano_atual = ano_inicio + mes_ano[0]
             mes_atual = meses_portugueses[mes_atual -1]
+            escola = instance.escola
 
-            mensalidade = MensalidadePagamento(aluno=instance, mes= mes_atual, ano=ano_atual, paga=False)
+            mensalidade = MensalidadePagamento(aluno=instance, mes= mes_atual, ano=ano_atual, paga=False, escola=escola)
             mensalidade.save()
 
 

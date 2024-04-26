@@ -1,5 +1,6 @@
 
 import os
+import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -10,7 +11,7 @@ SECRET_KEY = 'django-insecure-0^ossnt%+j8st-c3*r0k$y686+0n1%n_$-50+@-u2%ps#m+86b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://associacao-pais-bba8979e8756.herokuapp.com/']
 
 
 # Application definition
@@ -146,3 +147,5 @@ LOGGING = {
     },
 }
 
+
+django_heroku.settings(locals())

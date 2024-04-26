@@ -5,26 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e944f2f4-2aab-4901-8b19-ba25125d700d" name="Changes" comment="~">
-      <change afterPath="$PROJECT_DIR$/apps/gestao/templates/gestao/tipodespesa_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/mensalidadepagamento.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/staticfiles/js/mensalidadepagamento.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/celery.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tasks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/escolas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/escolas/templates/mensalidadePagamento/mensalidadepagamento_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/templates/mensalidadePagamento/mensalidadepagamento_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/escolas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/escolas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/estudantes/templates/estudantes/aluno_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/templates/estudantes/aluno_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/escolas/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/signals.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/estudantes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gestao/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gestao/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/gestao/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gestao/templates/gestao/entradas_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/templates/gestao/entradas_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gestao/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/gestao/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/associacao/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/associacao/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/associacao/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/associacao/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/media/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/media/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/staticfiles/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +38,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "rikb1g"
+  }
+}]]></component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/rikb1g/gestao_associacao_django.git",
+    "accountId": "4b40607e-840c-4e65-bef6-78e74b3dcd77"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -75,11 +84,11 @@
       <recent name="$PROJECT_DIR$/staticfiles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/apps/escolas/templates/mensalidadePagamento" />
       <recent name="$PROJECT_DIR$/apps/escolas/templates" />
       <recent name="$PROJECT_DIR$/apps/escolas" />
       <recent name="$PROJECT_DIR$/apps/escolas/templates/escolas" />
-      <recent name="$PROJECT_DIR$/apps/core/templates/atividade" />
     </key>
   </component>
   <component name="RunManager" selected="Python.runserver">
@@ -161,7 +170,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
+        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
       </set>
     </attachedChunks>
   </component>

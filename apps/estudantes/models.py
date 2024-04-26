@@ -25,6 +25,8 @@ class Aluno(models.Model):
     escola = models.ForeignKey(Escola, on_delete=models.PROTECT)
     ano_matricula = AnoField()
     ano_saida = AnoField( null=True,blank=True)
+    contato = models.CharField(max_length=20,blank=True)
+    enc_educacao = models.CharField(max_length=100, blank=True,verbose_name= "Encarregado de Educação")
     atividade = models.ManyToManyField(Atividades, blank=True)
     mensalidade = models.ManyToManyField(Mensalidade)
 
@@ -48,7 +50,7 @@ class MensalidadePagamento(models.Model):
     mes = models.CharField(verbose_name="Mês",max_length=20)
     ano = models.IntegerField(verbose_name="Ano")
     paga = models.BooleanField(default=False, verbose_name="Paga")
-
+    atraso = models.BooleanField(default=False)
 
     def __str__(self):
 

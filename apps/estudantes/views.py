@@ -35,7 +35,7 @@ class AlunoList(ListView):
 
 class AlunoCreate(CreateView):
     model = Aluno
-    fields = ['nome','ano_matricula','atividade', 'mensalidade']
+    fields = ['nome','ano_matricula','atividade', 'mensalidade','enc_educacao', 'contato']
 
     def form_valid(self, form):
         aluno = form.save(commit=False)
@@ -53,7 +53,7 @@ def remover_aluno(request, pk):
 
 class AlunoEdit(UpdateView):
     model = Aluno
-    fields = ['nome', 'ano_matricula','ano_saida','atividade', 'mensalidade']
+    fields = ['nome', 'ano_matricula','ano_saida','atividade', 'mensalidade','enc_educacao', 'contato']
     success_url = reverse_lazy('alunos_list')
 
 

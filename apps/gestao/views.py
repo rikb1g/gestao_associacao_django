@@ -49,7 +49,7 @@ class DespesasList(ListView):
                     ano_selecionado = str(ano_int)
             except:
                 pass
-             
+            
             return Despesas.objects.filter(escola= escola, data__month=mes_selecionado, data__year=ano_selecionado)
             
     
@@ -80,29 +80,41 @@ class EntradasList(ListView):
     def get_queryset(self):
         escola = self.request.user.utilizador.escola
         ano_selecionado = self.request.GET.get('ano')
-        mes_select = self.request.GET.get('mes')
+        mes_selecionado = self.request.GET.get('mes')
         mes_atual = datetime.datetime.now().month
         ano_atual = datetime.datetime.now().year
         pesquisa = self.request.GET.get('search')
+
 
         if pesquisa:
             return Entradas.objects.filter(nome__icontains=pesquisa, escola = escola)
         else:
             try:
-                if mes_select is None:
-                    mes_select = mes_atual
-                    mes_select = ano_atual
-                elif mes_select in meses_ano_letivo_ano_atual:
-                    mes_selecionado = meses_ano_letivo_ano_atual.index(mes_select) + 9
-                    print(mes_select)
+                if mes_selecionado is None:
+                    mes_selecionado = mes_atual
+                    ano_selecionado = ano_atual
+
+                elif mes_selecionado == "Setembro":
+                    mes_selecionado = 9
+                    ano_selecionado = ano_selecionado           
+                elif mes_selecionado == "Outubro":
+                    mes_selecionado = 10
+                    ano_selecionado = ano_selecionado
+                elif mes_selecionado == "Novembro":
+                    mes_selecionado = 11
+                    ano_selecionado = ano_selecionado
+                elif mes_selecionado == "Dezembro":
+                    mes_selecionado = 12
                     ano_selecionado = ano_selecionado
                 else:
-                    mes_select = meses_portugueses.index(mes_selecionado) + 1
+                    mes_selecionado = meses_portugueses.index(mes_selecionado) + 1
                     ano_int = int(ano_selecionado) + 1
                     ano_selecionado = str(ano_int)
             except: 
                 pass
-            return Entradas.objects.filter(escola= escola, data__month= mes_select, data__year= ano_selecionado)
+            return Entradas.objects.filter(escola= escola, data__month= mes_selecionado, data__year= ano_selecionado)
+        
+        
     def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
         context= super().get_context_data(**kwargs)
         ano_inicial = 2023

@@ -72,27 +72,25 @@
 <div class="dgv">
     <div class="resultado">
         <div class="titulos">
-            <div class="titulo cd1">ID</div>
-            <div class="titulo cd2">Tipo</div>
-            <div class="titulo cd3">Fatura</div>
-            <div class="titulo cd4">Descrição</div>
-            <div class="titulo cd5">Descrição</div>
-            <div class="titulo cd6">Valor</div>
-            <div class="titulo cd7">Operações</div>
+            <div class="titulo ce1">ID</div>
+            <div class="titulo ce2">Tipo</div>
+            <div class="titulo ce3">Descrição</div>
+            <div class="titulo ce4">Data</div>
+            <div class="titulo ce5">Valor</div>
+            <div class="titulo ce6">Operações</div>
         </div>
             {% for entrada in entradas_list %}
         <div class="dados">
             <div class="linhadados">
-                <div class="coluna cd1">{{entrada.id}}</div>
-                <div class="coluna cd2">{{entrada.tipo}}</div>
-                <div class="coluna cd3">{{entrada.fatura}}</div>
-                <div class="coluna cd4">{{entrada.descricao}}</div>
-                <div class="coluna cd5">{{entrada.data.day}}/{{entrada.data.month}}/{{entrada.data.year}}</div>
-                <div class="coluna cd6">{{entrada.valor}}</div>
-                <div class="coluna cd7">
+                <div class="coluna ce1">{{entrada.id}}</div>
+                <div class="coluna ce2">{{entrada.tipo}}</div>
+                <div class="coluna ce3">{{entrada.descricao}}</div>
+                <div class="coluna ce4">{{entrada.data.day}}/{{entrada.data.month}}/{{entrada.data.year}}</div>
+                <div class="coluna ce5">{{entrada.valor}}€</div>
+                <div class="coluna ce6">
                     <div>
                         <a onclick="exibirPopUPConfirmacao('{{entrada.id}}','{{entrada.descricao}}')"><img src="{% static 'images/delete.svg' %}" alt="eliminar"></a>
-                        <a href="{% url 'entradas_edit' despesa.id %}"><img src="{% static 'images/edit.svg' %}" alt="editar"></a>
+                        <a href="{% url 'entradas_edit' entrada.id %}"><img src="{% static 'images/edit.svg' %}" alt="editar"></a>
                     </div>
                 </div>
 
@@ -100,7 +98,9 @@
             </div>
             
             {% endfor %}
-            <p>total</p> <p>{{ total_receita_mensal }}</p>
+            <p>total</p>
+            <br>
+             <p>{{ total_entrada_mensal }}</p>
         </div>
     </div>
 

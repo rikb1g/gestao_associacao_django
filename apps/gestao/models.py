@@ -57,17 +57,17 @@ def delete_file_on_post_delete(sender, instance, **kwargs):
 
 class Entradas(models.Model):
     tipo = models.ForeignKey(TipoEntrada,on_delete=models.CASCADE)
-    ficheiro = models.FileField(blank=True)
+    ficheiro = models.FileField(blank=True,upload_to='Entradas/')
     descricao = models.CharField(max_length=100, blank=True, null=True)
     valor = models.DecimalField(max_digits=10, decimal_places=2, validators=[MinValueValidator(0.00)])
     escola = models.ForeignKey(Escola, on_delete=models.CASCADE)
-    data = models.DateTimeField()
+    data = models.DateTimeField(null=True,blank=True)
 
     def get_absolute_url(self):
         return reverse('receitas_list')
 
     def __str__(self):
-        return self.tipo, self.fatura,self.descricao, self.escola.name, self.ano, self.mes
+        return f"{self.tipo},{self.descricao}, {self.data}"
     
     @classmethod
     def total_receita_mensal(cls, escola, mes, ano):
@@ -77,4 +77,9 @@ class Entradas(models.Model):
     def total_receita(cls, escola):
         return cls.objects.filter(escola= escola).aggregate(total=Sum('valor'))['total'] or 0
 
+@receiver(post_delete, sender=Entradas)
+def delete_file_on_post_delete(sender, instance, **kwargs):
+    if instance.ficheiro:
+        if os.path.isfile(instance.ficheiro.path):
+            os.remove(instance.ficheiro.path)
 
