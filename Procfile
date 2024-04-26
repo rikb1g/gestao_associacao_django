@@ -1,1 +1,1 @@
-web: gunicorn associacao.wsgi
+web: gunicorn associacao.wsgi --log-file
