@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+
+<div class="container text-center">
+    
+        <div class="mt-5">
+            <p><strong>Nome:</strong> {{ aluno_detail.nome }}</p>
+            <p><strong>Escola:</strong> {{ aluno_detail.escola }}</p>
+            <p><strong>Ano Entrada:</strong> {{ aluno_detail.ano_matricula }}</p>
+            <p><strong>Ano Saída:</strong> {{ aluno_detail.ano_saida }}</p>
+            <p><strong>Contato:</strong> {{ aluno_detail.contato }}</p>
+            <p><strong>Encarregado de Educação:</strong> {{ aluno_detail.enc_educacao }}</p>
+            <p><strong>Contato:</strong>{{ aluno_detail.nome }}</p>
+            
+        </div>
+     
+
+</div>
+
+
+{% endblock %}

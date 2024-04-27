@@ -12,3 +12,7 @@ urlpatterns = [
     path("escolas/", include("apps.escolas.urls")),
     path('gestaoFinanceira/', include("apps.gestao.urls")),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

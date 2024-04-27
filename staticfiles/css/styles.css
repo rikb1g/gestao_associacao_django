@@ -32,7 +32,6 @@
 
 
 }
-
 .titulo{
     border-right: 1px solid #ddd;
 }
@@ -124,41 +123,19 @@
     width: 15%;
 }
 .cd7 {
-    width: 15%;
-}
-
-/*  tipo despesa*/
-
-.resultadoat {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 600px;
-}
-
-.ct1{
     width: 20%;
 }
 
-.ct2 {
-    width: 60%;
-}
 
-.ct3 {
-    width: 20%;
-}
-
-/* entradas */
-
+/*  */
 .ce1{
     width: 5%;
 }
 .ce2{
-    width: 15%;
+    width: 225%;
 }
 .ce3{
-    width: 35%;
+    width: 20%;
 }
 .ce4{
     width: 15%;
@@ -167,6 +144,6 @@
     width: 15%;
 }
 .ce6{
-    width: 15%;
+    width: 20%;
 }
 

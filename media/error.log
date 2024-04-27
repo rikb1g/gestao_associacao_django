@@ -32529,3 +32529,24 @@ Traceback (most recent call last):
                                            ^^^
 UnboundLocalError: cannot access local variable 'mes' where it is not associated with a value
 "POST /escolas/atualizarMensalidadeAluno/20/ HTTP/1.1" 500 85430
+Internal Server Error: /alunos/detalhe/1/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.12/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.12/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: estudantes/aluno_detail.html
+"GET /alunos/detalhe/1/ HTTP/1.1" 500 80937

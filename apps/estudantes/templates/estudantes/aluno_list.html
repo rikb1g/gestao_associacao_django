@@ -49,7 +49,7 @@
         <div class="dados">
             <div class="linhadados">
                 <div class="coluna c1">{{ aluno.id }}</div>
-                <div class="coluna c2">{{ aluno.nome }}</div>
+                <div class="coluna c2"><a href="{% url 'aluno_detail' aluno.id %}">{{ aluno.nome}}</a></div>
                 <div class="coluna c3">{{ aluno.ano_matricula }}</div>
                 <div class="coluna c4">{% if aluno.ano_saida %}
                     {{ aluno.ano_saida }}

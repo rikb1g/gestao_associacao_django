@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e944f2f4-2aab-4901-8b19-ba25125d700d" name="Changes" comment="~">
-      <change afterPath="$PROJECT_DIR$/celery.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/escolas/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/estudantes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/estudantes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/estudantes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/estudantes/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/signals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/estudantes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gestao/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gestao/templates/gestao/entradas_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/templates/gestao/entradas_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gestao/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gestao/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/media/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,21 +22,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "rikb1g"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;rikb1g&quot;
   }
-}]]></component>
+}</component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/rikb1g/gestao_associacao_django.git",
-    "accountId": "4b40607e-840c-4e65-bef6-78e74b3dcd77"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/rikb1g/gestao_associacao_django.git&quot;,
+    &quot;accountId&quot;: &quot;4b40607e-840c-4e65-bef6-78e74b3dcd77&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>

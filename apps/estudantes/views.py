@@ -57,6 +57,12 @@ class AlunoEdit(UpdateView):
     success_url = reverse_lazy('alunos_list')
 
 
+class AlunoDetail(DetailView):
+    model = Aluno
+    context_object_name = 'aluno_detail'
+
+
+
 
 
 

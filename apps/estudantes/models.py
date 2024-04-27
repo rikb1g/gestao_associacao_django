@@ -48,7 +48,7 @@ class MensalidadePagamento(models.Model):
     aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE, related_name='mensalidades')
     escola = models.ForeignKey(Escola, on_delete=models.CASCADE)
     mes = models.CharField(verbose_name="Mês",max_length=20)
-    ano = models.CharField(verbose_name="Ano")
+    ano = models.IntegerField(verbose_name="Ano")
     paga = models.BooleanField(default=False, verbose_name="Paga")
     atraso = models.BooleanField(default=False)
 

@@ -1,7 +1,7 @@
 
 import os
-import django_heroku
-import dj_database_url
+#import django_heroku
+#import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -12,8 +12,8 @@ SECRET_KEY = 'django-insecure-0^ossnt%+j8st-c3*r0k$y686+0n1%n_$-50+@-u2%ps#m+86b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-#ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app", ".now.sh"]
 
 
 # Application definition
@@ -67,16 +67,27 @@ WSGI_APPLICATION = 'associacao.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': '<mydb>',
+        'USER': '<myuser>',
+        'PASSWORD': '<mypass>',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 
-db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
-DATABASES['default'].update(db_from_env)
+#db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
+#DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -154,4 +165,4 @@ LOGGING = {
 }
 
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())

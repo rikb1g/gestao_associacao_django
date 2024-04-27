@@ -93,6 +93,12 @@
                     <div>
                         <a onclick="exibirPopUPConfirmacao('{{despesa.id}}','{{despesa.descricao}}')"><img src="{% static 'images/delete.svg' %}" alt="eliminar"></a>
                         <a href="{% url 'despesas_edit' despesa.id %}"><img src="{% static 'images/edit.svg' %}" alt="editar"></a>
+                        {% if despesa.ficheiro %}
+                        <a href="{{ despesa.ficheiro.url }}" download><img src="{% static 'images/file.svg' %}" alt="ficheiro"></a>
+
+                        {% else %}
+
+                        {% endif %}
                     </div>
                 </div>
 
