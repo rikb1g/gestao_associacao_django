@@ -32550,3 +32550,123 @@ Traceback (most recent call last):
     raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
 django.template.exceptions.TemplateDoesNotExist: estudantes/aluno_detail.html
 "GET /alunos/detalhe/1/ HTTP/1.1" 500 80937
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/core/views.py", line 21, in home
+    fig, axes = plt.subplotes(nrows=1, ncols=2, figsize=(10,5))
+                ^^^^^^^^^^^^^
+AttributeError: module 'matplotlib.pyplot' has no attribute 'subplotes'
+"GET / HTTP/1.1" 500 68858
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/core/views.py", line 21, in home
+    fig, axes = plt.subplotes(nrows=1, ncols=2, figsize=(10,5))
+                ^^^^^^^^^^^^^
+AttributeError: module 'matplotlib.pyplot' has no attribute 'subplotes'
+"GET / HTTP/1.1" 500 68852
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/core/views.py", line 21, in home
+    fig, axes = plt.subplotes(nrows=1, ncols=2, figsize=(10,5))
+                ^^^^^^^^^^^^^
+AttributeError: module 'matplotlib.pyplot' has no attribute 'subplotes'
+"GET / HTTP/1.1" 500 68852
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/core/views.py", line 23, in home
+    df_despesas.plot(kind='bar', x='data', y='valor', ax=axes[0], color='r', title='Despesas')
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/pandas/plotting/_core.py", line 1030, in __call__
+    return plot_backend.plot(data, kind=kind, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/pandas/plotting/_matplotlib/__init__.py", line 71, in plot
+    plot_obj.generate()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/pandas/plotting/_matplotlib/core.py", line 499, in generate
+    self._compute_plot_data()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/pandas/plotting/_matplotlib/core.py", line 698, in _compute_plot_data
+    raise TypeError("no numeric data to plot")
+TypeError: no numeric data to plot
+"GET / HTTP/1.1" 500 89736
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/core/views.py", line 28, in home
+    df_despesas.plot(kind='bar', x='data', y='valor', ax=axes[0], color='r', title='Despesas')
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/pandas/plotting/_core.py", line 1030, in __call__
+    return plot_backend.plot(data, kind=kind, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/pandas/plotting/_matplotlib/__init__.py", line 71, in plot
+    plot_obj.generate()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/pandas/plotting/_matplotlib/core.py", line 499, in generate
+    self._compute_plot_data()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/pandas/plotting/_matplotlib/core.py", line 698, in _compute_plot_data
+    raise TypeError("no numeric data to plot")
+TypeError: no numeric data to plot
+"GET / HTTP/1.1" 500 89743
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/core/views.py", line 33, in home
+    df_despesas.plot(kind='bar', x='data', y='valor', ax=axes[0], color='r', title='Despesas')
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/pandas/plotting/_core.py", line 1030, in __call__
+    return plot_backend.plot(data, kind=kind, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/pandas/plotting/_matplotlib/__init__.py", line 71, in plot
+    plot_obj.generate()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/pandas/plotting/_matplotlib/core.py", line 499, in generate
+    self._compute_plot_data()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/pandas/plotting/_matplotlib/core.py", line 698, in _compute_plot_data
+    raise TypeError("no numeric data to plot")
+TypeError: no numeric data to plot
+"GET / HTTP/1.1" 500 89826
