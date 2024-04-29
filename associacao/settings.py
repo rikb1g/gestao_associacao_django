@@ -67,8 +67,12 @@ WSGI_APPLICATION = 'associacao.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'rikb1g$Associacao',
+        'USER': 'rikb1g',
+        'PASSWORD': 'Manuel.2019',
+        'HOST': 'rikb1g.mysql.pythonanywhere-services.com',  # Ou outro endereço de host fornecido pelo PythonAnywhere
+        'PORT': '3306',  # Porta opcional, deixe em branco para o padrão
     }
 }
 
