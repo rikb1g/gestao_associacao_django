@@ -143,7 +143,7 @@ LOGGING = {
         'file': {
             'level': 'ERROR',
             'class': 'logging.FileHandler',
-            'filename': '/Users/ricardosousa/Desktop/django/Associacao/django_assoc/media/error.log',
+            'filename': '/home/rikb1g/gestao_associacao_django/error.log',
         },
     },
     'loggers': {
