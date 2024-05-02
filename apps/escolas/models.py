@@ -17,17 +17,6 @@ class Escola(models.Model):
 
 
 
-class Funcionario(models.Model):
-    nome = models.CharField(max_length=100)
-    horas_contrato = models.IntegerField(verbose_name="Horas contratadas diárias",name="Horas",
-                                         validators=[MinValueValidator(0)])
-    salario = models.DecimalField(max_digits=10,decimal_places=2, validators=[MinValueValidator(0.00)],
-                                  verbose_name="Salário")
-    funcao = models.CharField(max_length=50, verbose_name="Função")
-
-    def __str__(self):
-        return self.nome, self.funcao.verbose_name
-
 
 
 class Atividades(models.Model):

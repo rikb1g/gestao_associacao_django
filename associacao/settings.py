@@ -29,6 +29,8 @@ INSTALLED_APPS = [
     'apps.core',
     'apps.gestao',
     'apps.utilizadores',
+    'apps.funcionarios',
+    'apps.salarios',
 ]
 
 MIDDLEWARE = [
@@ -64,17 +66,13 @@ WSGI_APPLICATION = 'associacao.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'rikb1g$Associacao',
-        'USER': 'rikb1g',
-        'PASSWORD': 'Manuel.2019',
-        'HOST': 'rikb1g.mysql.pythonanywhere-services.com',  # Ou outro endereço de host fornecido pelo PythonAnywhere
-        'PORT': '3306',  # Porta opcional, deixe em branco para o padrão
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 #db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
@@ -143,7 +141,7 @@ LOGGING = {
         'file': {
             'level': 'ERROR',
             'class': 'logging.FileHandler',
-            'filename': '/home/rikb1g/gestao_associacao_django/error.log',
+            'filename': '/Users/ricardosousa/Desktop/django/Associacao/django_assoc/media/error.log',
         },
     },
     'loggers': {

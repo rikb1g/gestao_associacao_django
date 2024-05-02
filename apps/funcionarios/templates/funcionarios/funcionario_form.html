@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block main %}
+{% if object %}
+<p>Editar </p>
+{% else %}
+
+<p>Novo Funcionário</p>
+
+{% endif %}
+
+<div class="container text-center mt-5">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 text-center">
+            <form method="post" class="mt-3">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-secondary mt-3">Criar Funcionário</button>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+{% endblock %}

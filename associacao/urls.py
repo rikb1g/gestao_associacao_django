@@ -12,4 +12,5 @@ urlpatterns = [
     path("escolas/", include("apps.escolas.urls")),
     path('gestaoFinanceira/', include("apps.gestao.urls")),
     path('funcionarios/', include("apps.funcionarios.urls")),
+    path('salarios/', include("apps.salarios.urls")),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
