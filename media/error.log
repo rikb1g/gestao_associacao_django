@@ -35819,3 +35819,1096 @@ Traceback (most recent call last):
     raise self.RelatedObjectDoesNotExist(
 django.contrib.auth.models.User.utilizador.RelatedObjectDoesNotExist: User has no utilizador.
 "GET /funcionarios/ HTTP/1.1" 500 86653
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 17, in criar_recibo
+    ficheior = f.save(f"{instance.funcionario.nome}_{instance.data_fim}.xlsx")
+               ^^^^^^
+AttributeError: '_io.BufferedReader' object has no attribute 'save'
+"POST /salarios/ HTTP/1.1" 500 108189
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 18, in criar_recibo
+    recibo.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 1027, in _save_table
+    values = [
+             ^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 1031, in <listcomp>
+    (getattr(self, f.attname) if raw else f.pre_save(self, False)),
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/fields/files.py", line 315, in pre_save
+    if file and not file._committed:
+                    ^^^^^^^^^^^^^^^
+AttributeError: '_io.BufferedReader' object has no attribute '_committed'
+"POST /salarios/ HTTP/1.1" 500 133280
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 18, in criar_recibo
+    recibo.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 1027, in _save_table
+    values = [
+             ^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 1031, in <listcomp>
+    (getattr(self, f.attname) if raw else f.pre_save(self, False)),
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/fields/files.py", line 315, in pre_save
+    if file and not file._committed:
+                    ^^^^^^^^^^^^^^^
+AttributeError: '_io.BufferedReader' object has no attribute '_committed'
+"POST /salarios/ HTTP/1.1" 500 133339
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 18, in criar_recibo
+    salario.recibo.save(f'{instance.funcionario.nome}_{instance.data_fim}.xlsx', recibo)
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/fields/files.py", line 93, in save
+    self.name = self.storage.save(name, content, max_length=self.field.max_length)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/files/storage/base.py", line 38, in save
+    name = self._save(name, content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/files/storage/filesystem.py", line 110, in _save
+    for chunk in content.chunks():
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/files/base.py", line 60, in chunks
+    data = self.read(chunk_size)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xa3 in position 12: invalid start byte
+"POST /salarios/ HTTP/1.1" 500 141828
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 18, in criar_recibo
+    salario.recibo.save(f'{instance.funcionario.nome}_{instance.data_fim}.xlsx', recibo)
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/fields/files.py", line 93, in save
+    self.name = self.storage.save(name, content, max_length=self.field.max_length)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/files/storage/base.py", line 38, in save
+    name = self._save(name, content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/files/storage/filesystem.py", line 110, in _save
+    for chunk in content.chunks():
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/files/base.py", line 60, in chunks
+    data = self.read(chunk_size)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xa3 in position 12: invalid start byte
+"POST /salarios/ HTTP/1.1" 500 141686
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 18, in criar_recibo
+    salario.recibo.save(f'{instance.funcionario.nome}_{instance.data_fim}.xlsx', recibo)
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/fields/files.py", line 93, in save
+    self.name = self.storage.save(name, content, max_length=self.field.max_length)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/files/storage/base.py", line 38, in save
+    name = self._save(name, content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/files/storage/filesystem.py", line 110, in _save
+    for chunk in content.chunks():
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/files/base.py", line 60, in chunks
+    data = self.read(chunk_size)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xa3 in position 12: invalid start byte
+"POST /salarios/ HTTP/1.1" 500 141692
+Internal Server Error: /funcionarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/funcionarios/views.py", line 35, in get_queryset
+    escola = self.request.user.utilizador.escola
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/utils/functional.py", line 253, in inner
+    return func(_wrapped, *args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 525, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.utilizador.RelatedObjectDoesNotExist: User has no utilizador.
+"GET /funcionarios/ HTTP/1.1" 500 86653
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 21, in criar_recibo
+    funcionario = funcionario.objects.get(pk= instance.pk)
+                  ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'funcionario' where it is not associated with a value
+"POST /salarios/ HTTP/1.1" 500 108160
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 22, in criar_recibo
+    funcionario = Funcionario.objects.get(pk=instance.pk)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+apps.funcionarios.models.Funcionario.DoesNotExist: Funcionario matching query does not exist.
+"POST /salarios/ HTTP/1.1" 500 116673
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 18, in criar_recibo
+    funcionaio = Funcionario.objects.get(pk= instance.funcionaio.pk)
+                                             ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Salarios' object has no attribute 'funcionaio'
+"POST /salarios/ HTTP/1.1" 500 107908
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 22, in criar_recibo
+    recibo = File(open(caminho_do_arquivo,'rb'))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: "media/recibos/('Joana Rita',)_2024-06-01.xlsx"
+"POST /salarios/ HTTP/1.1" 500 108002
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 19, in criar_recibo
+    novo_recibo = RecibosVencimento.objects.create(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/query.py", line 677, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 567, in __init__
+    raise TypeError(
+TypeError: RecibosVencimento() got unexpected keyword arguments: 'recibo'
+"POST /salarios/ HTTP/1.1" 500 123347
+Internal Server Error: /funcionarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/list.py", line 154, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/funcionarios/views.py", line 35, in get_queryset
+    escola = self.request.user.utilizador.escola
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/utils/functional.py", line 253, in inner
+    return func(_wrapped, *args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 525, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.utilizador.RelatedObjectDoesNotExist: User has no utilizador.
+"GET /funcionarios/ HTTP/1.1" 500 86653
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 59, in calcular_salario
+    salario_final = salario_final - seg_social
+                    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'salario_final' where it is not associated with a value
+"POST /salarios/ HTTP/1.1" 500 108380
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 62, in calcular_salario
+    salario_final = salario_final - seg_social
+                    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'salario_final' where it is not associated with a value
+"POST /salarios/ HTTP/1.1" 500 108375
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 31, in calcular_salario
+    print("valor"+ instance.valor)
+          ~~~~~~~^~~~~~~~~~~~~~~~
+TypeError: can only concatenate str (not "decimal.Decimal") to str
+"POST /salarios/ HTTP/1.1" 500 107709
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 62, in calcular_salario
+    salario_final = salario_final - seg_social
+                    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'salario_final' where it is not associated with a value
+"POST /salarios/ HTTP/1.1" 500 108375
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 62, in calcular_salario
+    salario_final = salario_final - seg_social
+                    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'salario_final' where it is not associated with a value
+"POST /salarios/ HTTP/1.1" 500 108349
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 62, in calcular_salario
+    salario_final = salario_final - seg_social
+                    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'salario_final' where it is not associated with a value
+"POST /salarios/ HTTP/1.1" 500 108349
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 62, in calcular_salario
+    salario_final = salario_final - seg_social
+                    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'salario_final' where it is not associated with a value
+"POST /salarios/ HTTP/1.1" 500 108336
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 62, in calcular_salario
+    salario_final = salario_final - seg_social
+                    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'salario_final' where it is not associated with a value
+"POST /salarios/ HTTP/1.1" 500 108336
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 62, in calcular_salario
+    salario_final = salario_final - seg_social
+                    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'salario_final' where it is not associated with a value
+"POST /salarios/ HTTP/1.1" 500 108336
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 63, in calcular_salario
+    salario_final = salario_final - seg_social
+                    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'salario_final' where it is not associated with a value
+"POST /salarios/ HTTP/1.1" 500 108312
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 63, in calcular_salario
+    salario_final = salario_final - seg_social
+                    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'salario_final' where it is not associated with a value
+"POST /salarios/ HTTP/1.1" 500 108343
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 63, in calcular_salario
+    salario_final = salario_final - seg_social
+                    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'salario_final' where it is not associated with a value
+"POST /salarios/ HTTP/1.1" 500 108345
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 61, in calcular_salario
+    seg_social = (salario_iliquido * 0.11)
+                  ~~~~~~~~~~~~~~~~~^~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+"POST /salarios/ HTTP/1.1" 500 108020
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 64, in calcular_salario
+    salario_final = salario_final - seg_social
+                    ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'salario_final' where it is not associated with a value
+"POST /salarios/ HTTP/1.1" 500 108362
+Internal Server Error: /salarios/
+Traceback (most recent call last):
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/views.py", line 21, in form_valid
+    salarios = form.save()
+               ^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/forms/models.py", line 552, in save
+    self.instance.save()
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/base.py", line 924, in save_base
+    post_save.send(
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/apps/salarios/signals.py", line 67, in calcular_salario
+    tipo_despesa = TipoDespesa.objects.get(nome="Ordenado")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/.venv/lib/python3.11/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+apps.gestao.models.TipoDespesa.DoesNotExist: TipoDespesa matching query does not exist.
+"POST /salarios/ HTTP/1.1" 500 117349

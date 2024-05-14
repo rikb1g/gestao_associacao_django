@@ -27,6 +27,8 @@ class Funcionario(models.Model):
     horas_contrato = models.IntegerField(verbose_name="Horas contratadas diárias")
     funcao = models.CharField(max_length=50, verbose_name="Função")
     irs = models.ForeignKey(EscalaoIRS,on_delete=models.PROTECT)
+    iban = models.CharField(max_length=50,blank=True)
+    duodecimos = models.BooleanField(default=False)
     escola = models.ForeignKey(Escola, on_delete=models.PROTECT)
 
     def get_absolute_url(self):

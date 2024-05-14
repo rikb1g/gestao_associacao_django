@@ -23,6 +23,8 @@ class FormSalarios(forms.ModelForm):
             'data_inicio': forms.DateInput(attrs={'type':'date', 'class':'form-control'}),
             'data_fim': forms.DateInput(attrs={'type':'date', 'class':'form-control'}),
             'falta': forms.NumberInput(attrs={'class': 'form-control'}),
-            'valor': forms.NumberInput(attrs={'class': 'form-control','class': 'valor'})}
+            'valor': forms.NumberInput(attrs={'class': 'form-control','class': 'valor'}),
+
+        }
         
     

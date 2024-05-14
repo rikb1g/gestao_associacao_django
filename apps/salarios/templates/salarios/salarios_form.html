@@ -42,7 +42,7 @@
 <div class="col-4"></div>
 <div class="col-4">
 
-<form class="form-control mt-3" method="post">
+<form class="form-control mt-3" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="btn btn-secondary mt-3"> Gravar salário</button>

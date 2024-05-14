@@ -11,7 +11,7 @@ class Salarios(models.Model):
     data_fim = models.DateField()
     falta = models.DecimalField(validators=[MinValueValidator(0)],max_digits=10,decimal_places=2)
     valor = models.DecimalField(max_digits= 10,decimal_places=2)
-    recibo = models.FileField(blank=True,null=True,upload_to="salarios/recibos")
+    
 
     def get_absolute_url(self):
         return reverse('funcionarios_list')

@@ -13,7 +13,7 @@ from .models import Funcionario,EscalaoIRS
 
 class CriarFuncionario(CreateView):
     model = Funcionario
-    fields = ['nome', 'salario', 'salario', 'horas_contrato','funcao','irs']
+    fields = ['nome', 'salario', 'salario', 'horas_contrato','funcao','irs','iban','duodecimos']
 
     def form_valid(self, form: BaseModelForm) -> HttpResponse:
         funcionario = form.save(commit=False)
