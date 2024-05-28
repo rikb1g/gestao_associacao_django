@@ -2,14 +2,15 @@ from decimal import Decimal
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.core.files import File
+from django.core.exceptions import ObjectDoesNotExist
 from .models import Salarios
 from apps.funcionarios.models import Funcionario
 from apps.documentos.models import RecibosVencimento
 from apps.gestao.models import Despesas,TipoDespesa
 from openpyxl import load_workbook
-from datetime import datetime
+from datetime import date
 
-
+"""
 @receiver(post_save, sender=Salarios)
 def criar_recibo(sender, instance, created, **kwargs):
     if created:
@@ -24,38 +25,40 @@ def criar_recibo(sender, instance, created, **kwargs):
             ficheiro = File(open(caminho_do_arquivo,'rb'))
         )
         
-
+"""
 
 @receiver(post_save,sender=Salarios)
 def calcular_salario(sender,instance, created, **kwargs):
     if created:
         print(instance.valor)
         if instance.funcionario.duodecimos :
-            duodecimos = (float(instance.funcionario.salario) / 12) * 2
+            duodecimos = (instance.funcionario.salario / 12) * 2
             salario_sem_descontos = duodecimos + instance.valor
-            print(float(instance.valor))
-            seg_social = salario_sem_descontos * 0.11
+            seg_social = salario_sem_descontos * Decimal("0.11")
             salario_final = salario_sem_descontos - seg_social
             print(salario_final)
             escola= instance.funcionario.escola
-            tipo_despesa = TipoDespesa.objects.get(nome="Ordenado")
-            print(f"Salario: {salario_final}")
-
-            if tipo_despesa:
-                processar_despesa = Despesas(tipo_despesa,valor = salario_final,escola = escola,data = datetime.datetime.now())
+            data = date.today()
+            print(data)
+            try:
+                tipo_despesa = TipoDespesa.objects.get(nome="Ordenado")
+                print(tipo_despesa)
+            
+                processar_despesa = Despesas(tipo= tipo_despesa,valor = salario_final,escola = escola,data = data,descricao= f"Salario {instance.funcionario.nome}")
                 processar_despesa.save()
                 print("Encontrou tipo despesa")
-                
-            else:
+            
+            except ObjectDoesNotExist:
                 novo_tipo = TipoDespesa(nome = "Ordenado",escola = escola)
                 novo_tipo.save()
                 print("Nao encontrou tipo despesa")
 
-                processar_despesa = Despesas(tipo = novo_tipo,valor = salario_final,escola = escola,data = datetime.datetime.now())
+                processar_despesa = Despesas(tipo = novo_tipo,valor = salario_final,escola = escola, data = data,descricao= f"Salario {instance.funcionario.nome}")
                 processar_despesa.save()
                 print("Gravou com sucesso")
 
         else:
+
             print("Sem duodecimos")
             salario_iliquido = instance.valor
             print(salario_iliquido)
@@ -64,21 +67,23 @@ def calcular_salario(sender,instance, created, **kwargs):
             salario_final = salario_iliquido - seg_social
             print(salario_final)
             escola = instance.funcionario.escola
-            tipo_despesa = TipoDespesa.objects.get(nome="Ordenado")
-
-            if tipo_despesa:
-                processar_despesa = Despesas(tipo_despesa,valor = salario_final,escola = escola, data = datetime.datetime.now())
+            data = date.today()
+            
+            try:
+                tipo_despesa = TipoDespesa.objects.get(nome="Ordenado")
+                processar_despesa = Despesas(tipo= tipo_despesa,valor = salario_final,descricao= f"Salario {instance.funcionario.nome}",escola = escola, data = data)
                 processar_despesa.save()
                 print("Encontrou tipo despesa")
-                
-            else:
+            except ObjectDoesNotExist:
                 novo_tipo = TipoDespesa(nome = "Ordenado",escola = escola)
                 novo_tipo.save()
                 print("Nao encontrou tipo despesa")
 
-                processar_despesa = Despesas(tipo = novo_tipo,valor = salario_final,escola = escola,data = datetime.datetime.now())
+                processar_despesa = Despesas(tipo = novo_tipo,valor = salario_final,escola = escola,data = data,descricao= f"Salario {instance.funcionario.nome}")
                 processar_despesa.save()
                 print("Gravou com sucesso")
+                
+            
             
 
 
@@ -101,10 +106,7 @@ def guardar_recibo(nome, data_inicio, data_fim, valor):
     try:
         wb = load_workbook("media/recibos/exemplorecibo.xlsx")
         ws = wb.active
-        print(nome)
-        print(data_inicio)
-        print(data_fim)
-        print(valor)
+    
 
         ws['B7'] = nome
         arquivo_salvo = f'media/recibos/{nome}_{data_fim}.xlsx'

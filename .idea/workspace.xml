@@ -6,17 +6,37 @@
   <component name="ChangeListManager">
     <list default="true" id="e944f2f4-2aab-4901-8b19-ba25125d700d" name="Changes" comment="~">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/escolas/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/escolas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/escolas/templates/mensalidadePagamento/mensalidadepagamento_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/templates/mensalidadePagamento/mensalidadepagamento_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/funcionarios/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/funcionarios/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/funcionarios/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/funcionarios/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/funcionarios/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/funcionarios/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/funcionarios/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/funcionarios/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/associacao/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/associacao/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/documentos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/documentos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/funcionarios/templates/funcionarios/funcionario_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/funcionarios/templates/funcionarios/funcionario_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/salarios/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/salarios/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/salarios/templates/salarios/salarios_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/salarios/templates/salarios/salarios_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/salarios/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/salarios/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/salarios/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/salarios/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/media/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/media/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recibos/Joana Rita_2024-05-30.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recibos/Joana Rita_2024-05-31.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recibos/Joana Rita_2024-06-01.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/recibos/Joana Rita_2024-06-30.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-05-16_dAZ6DBQ.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-05-16_y7lUC9b.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-05-30.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-05-31.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-06-01.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-06-30.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-06-30_9bbt98F.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-06-30_JoTbSCW.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-06-30_ORuGQHS.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-06-30_Q7ZStIO.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-06-30_QnHQ2It.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-06-30_TJYwywy.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-06-30_UkbRavE.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-06-30_ZpeScEK.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-06-30_arBbKf2.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-06-30_cMZPRRr.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-06-30_dYAXLNu.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-06-30_lUtl3Ii.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-06-30_uXndWRQ.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/salarios/recibos/media/recibos/Joana_Rita_2024-06-30_wXT7oQ4.xlsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +186,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
+        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
       </set>
     </attachedChunks>
   </component>

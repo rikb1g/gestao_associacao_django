@@ -2,29 +2,31 @@
 {% load static %}
 
 {% block main %}
-
+<link rel="stylesheet" href="{% static 'css/resultados.css' %}">
 
 <p class="fs-1 text-center">Receitas</p>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a href="#" class="navbar-brand">Lista de Receitas Mensais</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active" href="{% url 'entradas_create' %}">Nova entrada</a>
                 </li>
                 <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gerir entradas
-          </a>
-                <ul class="dropdown-menu">
-                    <li><a href="{% url 'tipo_entradas_create' %}" class="dropdown-item">Inserir tipo</li>
-                    <li><a href="{% url 'tipo_entradas_list' %} " class="dropdown-item">Remover tipo</li>
-                    <li><a href="#" class="dropdown-item">Relatórios</a></li>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Gerir entradas
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'tipo_entradas_create' %}" class="dropdown-item">Inserir tipo</li>
+                        <li><a href="{% url 'tipo_entradas_list' %} " class="dropdown-item">Remover tipo</li>
+                        <li><a href="#" class="dropdown-item">Relatórios</a></li>
 
-                </ul>
+                    </ul>
 
             </ul>
 
@@ -42,26 +44,28 @@
         <div class="col-4"></div>
         <div class="col-4"></div>
         <div class="col-4">
-            <form method="GET" class="form-container d-flex align-items-center"> 
+            <form method="get" class="form-container d-flex align-items-center">
                 <div class="d-flex flex-column ms-3">
                     <label>Mês</label>
-                    <select id="mes" name="mes" class="form-select form-select-sm mb-3" aria-label="Small select example" onchange="salvarValorSelecionado()">
+                    <select id="mes" name="mes" class="form-select form-select-sm mb-3"
+                        aria-label="Small select example" onchange="salvarValorSelecionado()">
                         {% for mes in meses %}
-                            <option value="{{ mes }}">{{ mes }}</option>
+                        <option value="{{ mes }}">{{ mes }}</option>
                         {% endfor %}
                     </select>
                 </div>
                 <div class="d-flex flex-column ms-3"> <!-- Adicione margem à esquerda para separar os selects -->
                     <label for="ano">Ano letivo</label>
-                    <select id="ano" name="ano" class="form-select form-select-sm mb-3" aria-label="Small select example">
+                    <select id="ano" name="ano" class="form-select form-select-sm mb-3"
+                        aria-label="Small select example">
                         {% for ano in anos_letivos %}
-                            <option value="{{ano}}">{{ano}}/{{ano|add:1}}</option>
+                        <option value="{{ano}}">{{ano}}/{{ano|add:1}}</option>
                         {% endfor %}
                     </select>
 
                 </div>
                 <button type="submit" class="btn btn-info ms-3 ">Filtrar</button>
-                 
+
             </form>
         </div>
     </div>
@@ -79,7 +83,7 @@
             <div class="titulo ce5">Valor</div>
             <div class="titulo ce6">Operações</div>
         </div>
-            {% for entrada in entradas_list %}
+        {% for entrada in entradas_list %}
         <div class="dados">
             <div class="linhadados">
                 <div class="coluna ce1">{{entrada.id}}</div>
@@ -89,10 +93,13 @@
                 <div class="coluna ce5">{{entrada.valor}}€</div>
                 <div class="coluna ce6">
                     <div>
-                        <a onclick="exibirPopUPConfirmacao('{{entrada.id}}','{{entrada.descricao}}')"><img src="{% static 'images/delete.svg' %}" alt="eliminar"></a>
-                        <a href="{% url 'entradas_edit' entrada.id %}"><img src="{% static 'images/edit.svg' %}" alt="editar"></a>
+                        <a onclick="exibirPopUPConfirmacao('{{entrada.id}}','{{entrada.descricao}}')"><img
+                                src="{% static 'images/delete.svg' %}" alt="eliminar"></a>
+                        <a href="{% url 'entradas_edit' entrada.id %}"><img src="{% static 'images/edit.svg' %}"
+                                alt="editar"></a>
                         {% if entrada.ficheiro %}
-                        <a href="{{ entrada.ficheiro.url }}" download><img src="{% static 'images/file.svg' %}" alt="ficheiro"></a>
+                        <a href="{{ entrada.ficheiro.url }}" download><img src="{% static 'images/file.svg' %}"
+                                alt="ficheiro"></a>
 
                         {% else %}
 
@@ -100,28 +107,54 @@
                     </div>
                 </div>
 
-                </div>
             </div>
-            
-            {% endfor %}
-            <p>total</p>
-            <br>
-             <p>{{ total_entrada_mensal }}</p>
         </div>
+
+        {% endfor %}
+        <p>total</p>
+        <br>
+        <p>{{ total_entrada_mensal }}</p>
+    </div>
+</div>
+
+</div>
+
+<div class="container text-center">
+<p class="mt-5 text-center fs-2">Resumo mensal de Entradas e Saidas de dinheiro</p>
+
+<div class="dgv">
+    <div class="resultado">
+        <div class="titulos">
+            <div class="titulo cr1">Data</div>
+            <div class="titulo cr2">Depesas</div>
+            <div class="titulo cr3">Receitas</div>
+            <div class="titulo cr4">Lucro</div>
+
+        </div>
+        {% for key, value in meses.items %}
+        <div class="dados">
+        <div class="linhadados">
+            <div class="coluna cr1">{{ key }}</div>
+            <div class="coluna cr2">{{ value }}</div>
+            <div class="coluna cr3"></div>
+            <div class="coluna cr4"></div>
+
+        </div>
+      
+{% endfor %}
     </div>
 
 
 </div>
+</div>
+
+
+
+
+
 
 <script src="{% static  '/js/mensalidadepagamento.js'%}"></script>
 <script>
-function exibirPopUPConfirmacao(id, nome){
-    if (confirm("Tem a certeza que pretende eliminar "+ nome+" ?")){
-        window.location.href="/gestaoFinanceira/EntradaDelete/"+id+"/"
-        
-    }
-}
-
-</script>
-
-{% endblock %}
+    function exibirPopUPConfirmacao(id, nome) {
+        if (confirm("Tem a certeza que pretende eliminar " + nome + " ?")) {
+            window.location.href = "/gest

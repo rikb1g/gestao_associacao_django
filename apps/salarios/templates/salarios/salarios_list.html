@@ -1,8 +1,7 @@
-{% extends 'base.html' %}
+{% extends 'base.html'%}
 {% load static %}
 
 {% block main %}
-{% block navegadorfunc %}
 <p class="fs-1 text-center mt-5">Funcionários</p>
 <nav class="navbar navbar-expand-lg bg-body-tertiary mt-3">
     <div class="container-fluid">
@@ -36,41 +35,39 @@
     </div>
 </nav>
 
-{% endblock %}
 
 <div class="dgv">
 
 <div class="resultado">
     <div class="titulos">
         <div class="titulo c1">ID</div>
-        <div class="titulo c2">Nome</div>
-        <div class="titulo c3">Horas Contrato</div>
-        <div class="titulo c4">Salário</div>
-        <div class="titulo c5">Função</div>
-        <div class="titulo c6">Operações</div>
+        <div class="titulo c2">Funcionário</div>
+        <div class="titulo c3">Data</div>
+        <div class="titulo c4">Valor</div>
+        <div class="titulo c5">Operações</div>
 
     </div>
-    {% for funcionario in funcionario_list %}
+        {% for salario in Salarios_list %}
     <div class="dados">
         <div class="linhadados">
-            <div class="coluna c1">{{ funcionario.id}}</div>
-            <div class="coluna c2">{{ funcionario.nome }}</div>
-            <div class="coluna c3">{{ funcionario.horas_contrato}}</div>
-            <div class="coluna c4">{{ funcionario.salario }}</div>
-            <div class="coluna c5">{{ funcionario.funcao }}</div>
-            <div class="coluna c6">
+            <div class="coluna c1">{{salario.id}}</div>
+            <div class="coluna c2">{{salario.funcionario}}</div>
+            <div class="coluna c3">{{salario.data_fim}}</div>
+            <div class="coluna c4">{{salario.valor}}</div>
+            <div class="coluna c5">
                 <div>
-                    <a onclick="exibirPopUPConfirmacao('{{funcionario.id}}', '{{funcionario.nome}}');"><img src="{% static 'images/delete.svg' %}" alt=""></a>
-                    <a href="{% url 'update_funcionario' funcionario.id %}"><img src="{% static 'images/edit.svg' %}" alt=""></a>
+                    <a onclick="exibirPopUPConfirmacao('{{salario.id}}', '{{salario.funcionario}}', '{{salario.data_fim}}');"><img src="{% static 'images/delete.svg' %}" alt="eliminar"></a>
+                    <a href="#"><img src="{% static 'images/edit.svg' %}" alt="editar"></a>
+
                 </div>
+
 
             </div>
         </div>
-
     </div>
     {% endfor %}
-
 </div>
+
 
 
 </div>
@@ -78,11 +75,23 @@
 <script src="{% static '/js/mensalidadepagamento.js' %}"></script>
 
 <script>
-function exibirPopUPConfirmacao(id, nome){
-    if (confirm("Tem a certeza que pretende eliminar Funionario/a "+nome+" ?")){
-        window.location.href = "/funcionarios/eliminar/" + id + "/";
-    }
-}
 
+    function exibirPopUPConfirmacao(id,nome,mes){
+        if (confirm("Tem a certeza que pretende eliminar salário do mês "+mes+ " de " +nome+ " ?")){
+            window.location.href = "/salarios/eliminar/"+id+"/"
+
+        if (confirm("Pretende eliminar o salario da rubrica de despesas? ")){
+            window.location.href = "/salarios/eliminar/"+id+"/"
+        }
+        else{
+            alert("Salário não eliminado das despesas")
+        }
+    }
+        else {
+            alert("Ação cancelada.")
+        }
+    }
 </script>
-{% endblock %}
+
+
+{% endblock%}

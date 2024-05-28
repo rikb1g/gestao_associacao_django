@@ -6,6 +6,7 @@ from django.db.models.signals import post_delete
 from apps.escolas.models import Escola
 from django.db.models import Sum
 import os
+from datetime import datetime
 
 
 class TipoEntrada(models.Model):
@@ -42,8 +43,14 @@ class Despesas(models.Model):
     
     
     @classmethod
-    def total_despesa_mensal(cls, escola, mes, ano):
-        return cls.objects.filter(escola =escola,data__month= mes, data__year=ano).aggregate(total=Sum('valor'))['total'] or 0
+    def total_despesa_mensal(cls,escola ,mes, ano):
+        match mes:
+            case "Setembro":
+                return cls.objects.filter(escola =escola,data__range=[f"01-09-{ano}",f"30-09-{ano}"]).aggregate(total=Sum('valor'))['total'] or 0
+            
+    
+
+        
     
     @classmethod
     def total_despesa(cls, escola):
@@ -70,9 +77,10 @@ class Entradas(models.Model):
         return f"{self.tipo},{self.descricao}, {self.data}"
     
     @classmethod
-    def total_receita_mensal(cls, escola, mes, ano):
-        return cls.objects.filter(escola =escola,data__month= mes, data__year=ano).aggregate(total=Sum('valor'))['total'] or 0
+    def total_receita_mensal(cls,escola, data_inicio, data_fim):
+        return cls.objects.filter(escola=escola, data__range =[data_inicio,data_fim]).aaggregate(total=Sum('valor'))['total'] or 0
     
+
     @classmethod
     def total_receita(cls, escola):
         return cls.objects.filter(escola= escola).aggregate(total=Sum('valor'))['total'] or 0
@@ -83,3 +91,8 @@ def delete_file_on_post_delete(sender, instance, **kwargs):
         if os.path.isfile(instance.ficheiro.path):
             os.remove(instance.ficheiro.path)
 
+
+
+meses_ano_letivo_ano_atual = ["Setembro", "Outubro","Novembro", "Dezembro"]
+
+meses_ano_letivo_ano_seguinte = ["Janeiro","Fevereiro","Março","Abril","Maio", "Junho","Julho","Agosto"]

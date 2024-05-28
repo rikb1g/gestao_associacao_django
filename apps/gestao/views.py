@@ -8,7 +8,16 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, UpdateView,CreateView, DetailView
 from .models import Despesas, TipoDespesa, Entradas, TipoEntrada
 from .forms import FormDespesas, FormEntradas
+from django.db.models import Sum
 
+
+meses_ano_letivo_ano_atual = ["Setembro", "Outubro","Novembro", "Dezembro"]
+
+MESES = ("Setembro", "Outubro","Novembro", "Dezembro", "Janeiro","Fevereiro","Março","Abril",
+         "Maio", "Junho","Julho","Agosto")
+        
+meses_portugueses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+    "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
 
 class DespesasList(ListView):
     model = Despesas
@@ -52,7 +61,7 @@ class DespesasList(ListView):
             
             return Despesas.objects.filter(escola= escola, data__month=mes_selecionado, data__year=ano_selecionado)
             
-    
+
     def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
         ano_inicial = 2023
@@ -66,11 +75,14 @@ class DespesasList(ListView):
         ano_ =ano_selecionado(mes_get,ano_get)
 
         escola = self.request.user.utilizador.escola
-        context['total_despesa_mensal'] = Despesas.total_despesa_mensal(escola,mes_,ano_)
-        context['total_despesa'] = Despesas.total_despesa(escola)
+        context['entradas'] = Entradas.objects.filter(escola= escola)
+        context['despesas'] = Despesas.objects.filter(escola= escola)
+        context['mes_get'] = mes_get
+        context['ano_get'] = ano_get
+        context['meses'] = MESES
 
         return context
-    
+
 
 
 class EntradasList(ListView):
@@ -128,21 +140,18 @@ class EntradasList(ListView):
         ano_ = ano_selecionado(mes_get, ano_get)
         escola = self.request.user.utilizador.escola
 
-        context['total_entrada_mensal'] = Entradas.total_receita_mensal(escola,mes_,ano_)
+        context['entradas'] = Entradas.objects.filter(escola= escola)
+        context['despesas'] = Despesas.objects.filter(escola= escola)
+        context['mes_get'] = mes_
+        context['ano_get'] = ano_
+        Meses_dict = entradas_mes(escola, ano_get)
+        context['meses'] = Meses_dict
 
-        context['total_entradas'] = Entradas.total_receita(escola)
- 
         return context
 
 
 
-meses_ano_letivo_ano_atual = ["Setembro", "Outubro","Novembro", "Dezembro"]
 
-MESES = ("Setembro", "Outubro","Novembro", "Dezembro", "Janeiro","Fevereiro","Março","Abril",
-         "Maio", "Junho","Julho","Agosto")
-        
-meses_portugueses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
-    "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
 
 class DespesaCreate(CreateView):
     model = Despesas
@@ -288,6 +297,42 @@ def tipo_entradas_delete(request, pk):
 
 
 
+def despesas_mes(escola,ano):
+    ano_atual = datetime.datetime.now().year
+    despesas_mensais = {}
+    if ano is None:
+        ano = ano_atual
+    else:
+        for index_mes, mes in enumerate(MESES):
+            if index_mes < 4:
+                ano_pesquisa = ano + 1
+                data = index_mes - 3
+                query = Despesas.objects.filter(escola=escola, data__month=data, ano= ano_pesquisa).aggregate(total=Sum('valor'))['total'] or 0
+                despesas_mensais[mes] = query
+                return despesas_mensais
+            else:
+                data = index_mes + 9
+                query = Despesas.objects.filter(escola=escola, data__month=data, ano= ano_pesquisa).aggregate(total=Sum('valor'))['total'] or 0
+                despesas_mensais[mes] = query
+
+def entradas_mes(escola,ano):
+    ano_atual = datetime.datetime.now().year
+    despesas_mensais = {}
+    if ano is None:
+        ano = ano_atual
+    else:
+        for index_mes, mes in enumerate(MESES):
+            if index_mes < 4:
+                ano_pesquisa = ano + 1
+                data = index_mes - 3
+                query = Entradas.objects.filter(escola=escola, data__month=data, ano= ano_pesquisa).aggregate(total=Sum('valor'))['total'] or 0
+                despesas_mensais[mes] = query
+                return despesas_mensais
+            else:
+                data = index_mes + 9
+                query = Entradas.objects.filter(escola=escola, data__month=data, ano= ano_pesquisa).aggregate(total=Sum('valor'))['total'] or 0
+                despesas_mensais[mes]  = query
+
 
 
 def mes_selcionado(mes):
@@ -324,5 +369,9 @@ def ano_selecionado(mes,ano):
         pass
 
     return ano_selecionado
+
+
+
+
 
 

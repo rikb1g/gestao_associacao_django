@@ -1,0 +1,64 @@
+
+.resumo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 15px;
+    width: 1200px;
+
+}
+
+.resultados{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+}
+.titulosResultados{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    width: inherit;
+    background-color: #248;
+    color: #fff;
+}
+.titulosRes{
+        border-right: 1px solid white;
+
+}
+
+.dadosResultados{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: inherit;
+    background-color: #d6d6d6;
+
+}
+
+.resultados{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    width: inherit;
+}
+
+.cr1{
+    width: 20%;
+    
+}
+.cr2{
+    width: 30%;
+
+}
+.cr3{
+    width: 30%;
+}
+.cr4{
+    width: 10%;
+}

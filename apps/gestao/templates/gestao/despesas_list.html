@@ -42,7 +42,7 @@
         <div class="col-4"></div>
         <div class="col-4"></div>
         <div class="col-4">
-            <form method="GET" class="form-container d-flex align-items-center"> 
+            <form method="get" class="form-container d-flex align-items-center"> 
                 <div class="d-flex flex-column ms-3">
                     <label>Mês</label>
                     <select id="mes" name="mes" class="form-select form-select-sm mb-3" aria-label="Small select example" onchange="salvarValorSelecionado()">
@@ -106,11 +106,12 @@
             </div>
             
             {% endfor %}
-            <p>total</p> <p>{{ total_despesa_mensal }}</p>
+            <p>total</p> <p></p>
         </div>
     </div>
 
-
+<p>{{ mes_get }}</p>
+<p> {{ ano_get }}</p>
 </div>
 
 <script src="{% static  '/js/mensalidadepagamento.js'%}"></script>

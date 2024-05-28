@@ -1,4 +1,5 @@
 from typing import Any
+from django.db.models.query import QuerySet
 from django.forms import BaseModelForm
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -10,6 +11,11 @@ from .forms import FormSalarios
 
 class ListSalarios(ListView):
     model = Salarios
+    context_object_name = "Salarios_list"
+
+    def get_queryset(self) -> QuerySet[Any]:
+        escola = self.request.user.utilizador.escola
+        return Salarios.objects.filter() 
 
 
 
