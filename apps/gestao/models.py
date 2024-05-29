@@ -78,7 +78,7 @@ class Entradas(models.Model):
     
     @classmethod
     def total_receita_mensal(cls,escola, data_inicio, data_fim):
-        return cls.objects.filter(escola=escola, data__range =[data_inicio,data_fim]).aaggregate(total=Sum('valor'))['total'] or 0
+        return cls.objects.filter(escola=escola, data__range =[data_inicio,data_fim]).aggregate(total=Sum('valor'))['total'] or 0
     
 
     @classmethod

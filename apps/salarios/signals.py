@@ -64,8 +64,9 @@ def calcular_salario(sender,instance, created, **kwargs):
             print(salario_iliquido)
             seg_social = salario_iliquido * Decimal('0.11')
             print(seg_social)
+            
             salario_final = salario_iliquido - seg_social
-            print(salario_final)
+            salario_final = round(salario_final, 2)
             escola = instance.funcionario.escola
             data = date.today()
             

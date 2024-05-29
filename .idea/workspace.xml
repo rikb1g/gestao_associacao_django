@@ -107,7 +107,7 @@
       <recent name="$PROJECT_DIR$/apps/escolas/templates/escolas" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.runserver">
+  <component name="RunManager" selected="Python.runserver 8080">
     <configuration name="makemigrations" type="PythonConfigurationType" factoryName="Python">
       <module name="django_assoc" />
       <option name="ENV_FILES" value="" />
@@ -154,7 +154,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="runserver" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="runserver 8080" type="PythonConfigurationType" factoryName="Python">
       <module name="django_assoc" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -180,7 +180,7 @@
     <list>
       <item itemvalue="Python.makemigrations" />
       <item itemvalue="Python.migrate" />
-      <item itemvalue="Python.runserver" />
+      <item itemvalue="Python.runserver 8080" />
     </list>
   </component>
   <component name="SharedIndexes">

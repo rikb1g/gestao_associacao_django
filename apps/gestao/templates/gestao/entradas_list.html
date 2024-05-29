@@ -127,16 +127,16 @@
         <div class="titulos">
             <div class="titulo cr1">Data</div>
             <div class="titulo cr2">Depesas</div>
-            <div class="titulo cr3">Receitas</div>
+            <div class="titulo cr3">Entradas</div>
             <div class="titulo cr4">Lucro</div>
 
         </div>
-        {% for key, value in meses.items %}
+        {% for meses, dados in meses_entradas.items %}
         <div class="dados">
         <div class="linhadados">
-            <div class="coluna cr1">{{ key }}</div>
-            <div class="coluna cr2">{{ value }}</div>
-            <div class="coluna cr3"></div>
+            <div class="coluna cr1">{{ meses }}</div>
+            <div class="coluna cr2">{{ dados.despesas|floatformat:2 }}</div>
+            <div class="coluna cr3">{{ dados.entradas|floatformat:2  }}</div>
             <div class="coluna cr4"></div>
 
         </div>
@@ -157,4 +157,11 @@
 <script>
     function exibirPopUPConfirmacao(id, nome) {
         if (confirm("Tem a certeza que pretende eliminar " + nome + " ?")) {
-            window.location.href = "/gest
+            window.location.href = "/gestaoFinanceira/EntradaDelete/" + id + "/"
+
+        }
+    }
+
+</script>
+
+{% endblock %}
