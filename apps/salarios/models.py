@@ -14,7 +14,7 @@ class Salarios(models.Model):
     
 
     def get_absolute_url(self):
-        return reverse('funcionarios_list')
+        return reverse('mensalidade_list')
 
     def __str__(self) -> str:
         return f"{self.funcionario} data {self.data_inicio} a {self.data_fim}"

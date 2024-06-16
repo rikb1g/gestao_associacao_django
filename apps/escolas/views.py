@@ -175,6 +175,7 @@ class MensalidadeList(ListView):
 
 
 
+
 class MensaliadeEdit(UpdateView):
     model = Mensalidade
     fields = ['nome', 'valor']
@@ -206,3 +207,7 @@ def atualizar_mensalidade_aluno(request, mensalidade_id):
             mensalidade.save()
             return JsonResponse({'mensagem': 'Mensalidade atualizada com sucesso'})
     return JsonResponse({'erro': 'Erro ao atualizar a mensalidade'}, status = 400)
+
+
+
+

@@ -49,7 +49,7 @@
                 <div class="coluna ca4">{{ atividade.contar_alunos }}</div>
                 <div class="coluna ca5">
                     <div>
-                        <a href="#" onclick="exibirPopUPConfirmacaoAtividade({{ atividade.id }}, '{{ atividade.nome }}');"> <img src="{% static 'images/delete.svg' %}"></a>
+                        <a href="#" onclick="exibirPopUPConfirmacaoAtividade('{{atividade.id }}', '{{ atividade.nome }}');"> <img src="{% static 'images/delete.svg' %}"></a>
                         <a href="{% url 'atividade_update' atividade.id %}"><img src="{% static 'images/edit.svg' %}"></a>
                     </div>
                 </div>

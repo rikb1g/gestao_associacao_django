@@ -39,14 +39,12 @@ def calcular_salario(sender,instance, created, **kwargs):
             print(salario_final)
             escola= instance.funcionario.escola
             data = date.today()
-            print(data)
             try:
                 tipo_despesa = TipoDespesa.objects.get(nome="Ordenado")
-                print(tipo_despesa)
             
                 processar_despesa = Despesas(tipo= tipo_despesa,valor = salario_final,escola = escola,data = data,descricao= f"Salario {instance.funcionario.nome}")
                 processar_despesa.save()
-                print("Encontrou tipo despesa")
+
             
             except ObjectDoesNotExist:
                 novo_tipo = TipoDespesa(nome = "Ordenado",escola = escola)

@@ -2,7 +2,7 @@ from typing import Any
 import datetime
 from django.db.models.query import QuerySet
 from django.forms import BaseModelForm
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, UpdateView,CreateView, DetailView
@@ -59,21 +59,22 @@ class DespesasList(ListView):
     def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
         ano_inicial = 2023
-        anos_letivos = range(ano_inicial, ano_inicial +10)
+        anos_letivos = range(ano_inicial, ano_inicial + 10)
         context['anos_letivos'] = anos_letivos
         context['meses'] = MESES
         mes_get = self.request.GET.get('mes')
         ano_get = self.request.GET.get('ano')
 
         mes_ = mes_selcionado(mes_get)
-        ano_ =ano_selecionado(mes_get,ano_get)
-
+        ano_ = ano_selecionado(mes_get, ano_get)
         escola = self.request.user.utilizador.escola
-        context['entradas'] = Entradas.objects.filter(escola= escola)
-        context['despesas'] = Despesas.objects.filter(escola= escola)
-        context['mes_get'] = mes_get
-        context['ano_get'] = ano_get
-        context['meses_despesas'] = MESES
+
+        context['entradas'] = Entradas.objects.filter(escola=escola)
+        context['despesas'] = Despesas.objects.filter(escola=escola)
+        context['mes_get'] = mes_
+        context['ano_get'] = ano_
+        meses_entradas = tabela_mensal(escola, ano_get)
+        context['meses_entradas'] = meses_entradas
 
         return context
 
@@ -359,6 +360,14 @@ def ano_selecionado(mes,ano):
 
     return ano_selecionado
 
+
+
+def total_entradas(request):
+    escola = request.user.utilizador.escola
+    total = Entradas.objects.filter(escola=escola).aggregate(Sum('total'))['total_sum']
+    if request.method == 'GET':
+        return JsonResponse({'total_entradas': total})
+    
 
 
 

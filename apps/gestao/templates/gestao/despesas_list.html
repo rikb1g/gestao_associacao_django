@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block main %}
-
+<link rel="stylesheet" href="{% static 'css/resultados.css' %}">
 
 <p class="fs-1 text-center">Despesas</p>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -106,15 +106,47 @@
             </div>
             
             {% endfor %}
-            <p>total</p> <p></p>
         </div>
     </div>
 
-<p>{{ mes_get }}</p>
-<p> {{ ano_get }}</p>
+<div class="container text-center">
+<p class="mt-5 text-center fs-2">Resumo mensal de Entradas e Saidas de dinheiro</p>
+
+<div class="dgv">
+    <div class="resultado">
+        <div class="titulos">
+            <div class="titulo cr1">Data</div>
+            <div class="titulo cr2">Depesas</div>
+            <div class="titulo cr3">Entradas</div>
+            <div class="titulo cr4">Lucro</div>
+
+        </div>
+        {% for meses, dados in meses_entradas.items %}
+        <div class="dados">
+        <div class="linhadados">
+            <div class="coluna cr1">{{ meses }}</div>
+            <div class="coluna cr2 despesa" id="despesa">{{ dados.despesas|floatformat:2 }}</div>
+            <div class="coluna cr3 entrada" id="entrada">{{ dados.entradas|floatformat:2  }}</div>
+            <div class="coluna cr4 total" id="total"></div>
+
+        </div>
+
+{% endfor %}
+    </div>
+
+
+</div>
 </div>
 
+<div class="mt-5">
+
+</div>
+
+
+
+
 <script src="{% static  '/js/mensalidadepagamento.js'%}"></script>
+    <script src="{% static  '/js/entradasSaidas.js'%}"></script>
 <script>
 function exibirPopUPConfirmacao(id, nome){
     if (confirm("Tem a certeza que pretende eliminar "+ nome+" ?")){

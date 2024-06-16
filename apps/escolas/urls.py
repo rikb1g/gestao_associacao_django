@@ -14,5 +14,7 @@ urlpatterns = [
     path('editarMensalidade/<int:pk>/',MensaliadeEdit.as_view(),name='mensalidade_base_update'),
     path('removerMensalidade/<int:pk>/',remover_mensalidade,name='mensalidade_remove'),
     path('atualizarMensalidadeAluno/<int:mensalidade_id>/',atualizar_mensalidade_aluno,name='atualizar_mensalidade_aluno'),
+    path('mensalidadeAtraso',MensalidadeList.as_view(),name='mensalidade_atraso'),# falta criar função#
+    path('mensalidadeAluno',MensalidadeList.as_view(),name='mensalidade_aluno'),# falta criar função#
 
 ]

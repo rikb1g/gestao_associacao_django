@@ -33,7 +33,7 @@
         <div class="coluna ca3">{{ mensalidade.valor }}</div>
         <div class="coluna ca4">{{ mensalidade.contar_alunos }}</div>
         <div class="coluna ca5">
-            <a onclick="exibirPopUpConfirmacaoMensa({{mensalidade.id}}, '{{mensalidade.nome}}');"><img src="{% static 'images/delete.svg' %}" alt="eliminar"></a>
+            <a onclick="exibirPopUpConfirmacaoMensa('{{mensalidade.id}}', '{{mensalidade.nome}}');"><img src="{% static 'images/delete.svg' %}" alt="eliminar"></a>
             <a href="{% url 'mensalidade_base_update' mensalidade.id %}"><img src="{% static 'images/edit.svg' %}" alt="editar"></a>
         </div>
     </div>

@@ -111,13 +111,10 @@
         </div>
 
         {% endfor %}
-        <p>total</p>
-        <br>
-        <p>{{ total_entrada_mensal }}</p>
     </div>
 </div>
 
-</div>
+
 
 <div class="container text-center">
 <p class="mt-5 text-center fs-2">Resumo mensal de Entradas e Saidas de dinheiro</p>
@@ -135,9 +132,9 @@
         <div class="dados">
         <div class="linhadados">
             <div class="coluna cr1">{{ meses }}</div>
-            <div class="coluna cr2">{{ dados.despesas|floatformat:2 }}</div>
-            <div class="coluna cr3">{{ dados.entradas|floatformat:2  }}</div>
-            <div class="coluna cr4"></div>
+            <div class="coluna cr2 despesa" id="despesa" >{{ dados.despesas|floatformat:2 }}</div>
+            <div class="coluna cr3 entrada" id="entrada">{{ dados.entradas|floatformat:2  }}</div>
+            <div class="coluna cr4 total" id="total"></div>
 
         </div>
       
@@ -149,11 +146,14 @@
 </div>
 
 
+<div class="mt-5">
 
+</div>
 
 
 
 <script src="{% static  '/js/mensalidadepagamento.js'%}"></script>
+<script src="{% static  '/js/entradasSaidas.js'%}"></script>
 <script>
     function exibirPopUPConfirmacao(id, nome) {
         if (confirm("Tem a certeza que pretende eliminar " + nome + " ?")) {

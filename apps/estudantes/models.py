@@ -24,11 +24,20 @@ class Aluno(models.Model):
     nome = models.CharField(max_length=100,)
     escola = models.ForeignKey(Escola, on_delete=models.PROTECT)
     ano_matricula = AnoField()
-    ano_saida = AnoField( null=True,blank=True)
+    ano_saida = AnoField(null=True,blank=True)
     contato = models.CharField(max_length=20,blank=True)
     enc_educacao = models.CharField(max_length=100, blank=True,verbose_name= "Encarregado de Educação")
     atividade = models.ManyToManyField(Atividades, blank=True)
     mensalidade = models.ManyToManyField(Mensalidade)
+
+
+    def calcular_valor_mensalidade(self):
+        mensalidade = sum(mensalidade.valor for mensalidade in self.mensalidade.all())
+        atividade = sum(atividade.valor for atividade in self.atividade.all())
+        print(atividade)
+        total = mensalidade + atividade
+        return total
+
 
     def get_absolute_url(self):
         return reverse('alunos_list')

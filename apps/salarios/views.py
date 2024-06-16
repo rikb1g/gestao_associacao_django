@@ -2,7 +2,7 @@ from typing import Any
 from django.db.models.query import QuerySet
 from django.forms import BaseModelForm
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView, CreateView
 from .models import Salarios
 from .forms import FormSalarios
@@ -35,3 +35,10 @@ class CreateSalarios(CreateView):
         kwargs = super().get_form_kwargs()
         kwargs['escola'] = self.request.user.utilizador.escola
         return kwargs
+
+
+def eliminar_salario(request,pk):
+    salario_eliminar = get_object_or_404(Salarios, pk=pk)
+    salario_eliminar.delete()
+
+    return redirect("salarios_list")

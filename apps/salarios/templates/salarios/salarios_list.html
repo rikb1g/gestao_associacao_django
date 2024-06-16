@@ -79,14 +79,7 @@
     function exibirPopUPConfirmacao(id,nome,mes){
         if (confirm("Tem a certeza que pretende eliminar salário do mês "+mes+ " de " +nome+ " ?")){
             window.location.href = "/salarios/eliminar/"+id+"/"
-
-        if (confirm("Pretende eliminar o salario da rubrica de despesas? ")){
-            window.location.href = "/salarios/eliminar/"+id+"/"
         }
-        else{
-            alert("Salário não eliminado das despesas")
-        }
-    }
         else {
             alert("Ação cancelada.")
         }

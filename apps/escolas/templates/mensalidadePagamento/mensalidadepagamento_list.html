@@ -19,8 +19,8 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gerir mensalidades
           </a>
                 <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item">Mensalidade por aluno</a></li>
-                    <li><a href="#" class="dropdown-item">Mensaliades em atraso</a></li>
+                    <li><a href="{% url 'mensalidade_aluno' %}" class="dropdown-item">Mensalidade por aluno</a></li>
+                    <li><a href="{% url 'mensalidade_atraso' %}" class="dropdown-item">Mensaliades em atraso</a></li>
                     <li><a href="{% url 'update_escola' user.utilizador.escola.id  %}" class="dropdown-item">Alterar valor Mensalidade</a></li>
 
                 </ul>
@@ -74,8 +74,8 @@
             <div class="titulo c2">Nome</div>
             <div class="titulo c3">Mês</div>
             <div class="titulo c4">Ano</div>
-            <div class="titulo c5">Pago</div>
-            <div class="titulo c5"></div>
+            <div class="titulo c5">Valor Mensaldiade</div>
+            <div class="titulo c6">Pago</div>
         </div>
 
 
@@ -89,11 +89,11 @@
 
                 <div class="coluna c3">{{ mensalidade.mes}}</div>
                 <div class="coluna c4">{{ mensalidade.ano }}</div>
-                <div class="coluna c5">
+
+                <div class="coluna c5">{{ mensalidade.aluno.calcular_valor_mensalidade }}</div>
+                <div class="coluna c6">
                     <input type="checkbox" id="paga-{{ mensalidade.id }}" onchange="atualizarMensalidade('{{ mensalidade.id }}')" {% if mensalidade.paga%}checked{%endif%} >
                 </div>
-
-                <div class="coluna c6">{{ mensalidade.id}}</div>
 
 
 
@@ -105,9 +105,12 @@
 
         </div>
         
-        {% endblock %}
+        
 
     </div>
 
+
     <script src="{% static '/js/mensalidadepagamento.js' %}"></script>
+
+    {% endblock %}
 
