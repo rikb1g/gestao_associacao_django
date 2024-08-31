@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block main %}
 <p class="fs-1 text-center mt-5">Funcionários</p>
@@ -42,7 +43,7 @@
 <div class="col-4"></div>
 <div class="col-4">
 
-<form class="form-control mt-3" method="post" enctype="multipart/form-data">
+<form class="form-control mt-3" method="post" enctype="multipart/form-data" id="create-salarios-form">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="btn btn-secondary mt-3"> Gravar salário</button>
@@ -54,3 +55,31 @@
 </div>
 
 {% endblock %}
+<script src="{% static 'js/jquery.js' %}"></script>
+
+<script>
+    $(document).ready(function(){
+        $('#id_funcionario').change(function(){
+            console.log("aqui")
+            var funcionarioId = $(this).val()
+            if (funcionarioId){
+                $.ajax({
+                    url: "{% url 'get_funcionario_salario' %}",
+                    data: {
+                        'funcionario_id': funcionarioId
+                    },
+                    success: function(data){
+                        if(data.salario){
+                            $('#id_valor').val(data.salario)
+                        
+                        }else {
+                            $('#id_valor').val("")
+                        }
+                    }
+                })
+            }
+        })
+    })
+
+
+</script>

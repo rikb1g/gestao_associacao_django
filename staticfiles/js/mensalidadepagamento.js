@@ -119,5 +119,22 @@ function obterAnoLetivo(mes, ano){
         return ano
     }
 }
-
+document.getElementById('form-filter').addEventListener('submit', function(event){
+    event.preventDefault();
+    
+    var form = this;
+    var formData = new FormData(form);
+    
+        fetch(form.action, {
+        method: form.method,
+        body: formData,
+            })
+    .then(response => response.text())
+    .then(data => {
+        document.querySelector('.some-container').innerHTML = data;
+    })
+    .catch(error => console.error("Erro ao filtera", error));
+    
+    })
+    
 

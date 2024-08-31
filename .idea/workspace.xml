@@ -5,35 +5,610 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e944f2f4-2aab-4901-8b19-ba25125d700d" name="Changes" comment="~">
-      <change afterPath="$PROJECT_DIR$/apps/estudantes/migrations/0044_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/estudantes/migrations/0045_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/entradasSaidas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/staticfiles/css/resultados.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/django_assoc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/django_assoc.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/bin/celery" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp-5.2.0.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp-5.2.0.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp-5.2.0.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp-5.2.0.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp-5.2.0.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp-5.2.0.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp/abstract_channel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp/basic_message.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp/channel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp/connection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp/exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp/method_framing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp/platform.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp/protocol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp/sasl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp/serialization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp/spec.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp/transport.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/amqp/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard-4.2.0.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard-4.2.0.dist-info/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard-4.2.0.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard-4.2.0.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard-4.2.0.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard-4.2.0.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/_ext.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/_win.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/compat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/connection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/context.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/dummy/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/dummy/connection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/einfo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/forkserver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/heap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/managers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/pool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/popen_fork.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/popen_forkserver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/popen_spawn_posix.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/popen_spawn_win32.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/process.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/queues.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/reduction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/resource_sharer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/semaphore_tracker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/sharedctypes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/spawn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/synchronize.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/billiard/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery-5.4.0.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery-5.4.0.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery-5.4.0.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery-5.4.0.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery-5.4.0.dist-info/REQUESTED" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery-5.4.0.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery-5.4.0.dist-info/entry_points.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery-5.4.0.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/__main__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/_state.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/app/amqp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/app/annotations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/app/autoretry.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/app/backends.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/app/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/app/builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/app/control.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/app/defaults.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/app/events.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/app/log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/app/registry.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/app/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/app/task.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/app/trace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/app/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/apps/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/apps/beat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/apps/multi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/apps/worker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/arangodb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/asynchronous.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/azureblockblob.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/cache.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/cassandra.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/consul.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/cosmosdbsql.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/couchbase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/couchdb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/database/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/database/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/database/session.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/dynamodb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/elasticsearch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/filesystem.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/gcs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/mongodb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/redis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/rpc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/backends/s3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/beat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/amqp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/beat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/call.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/celery.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/control.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/events.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/graph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/logtool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/migrate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/multi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/purge.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/result.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/shell.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/upgrade.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bin/worker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/bootsteps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/canvas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/concurrency/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/concurrency/asynpool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/concurrency/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/concurrency/eventlet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/concurrency/gevent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/concurrency/prefork.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/concurrency/solo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/concurrency/thread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/contrib/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/contrib/abortable.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/contrib/django/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/contrib/django/task.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/contrib/migrate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/contrib/pytest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/contrib/rdb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/contrib/sphinx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/contrib/testing/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/contrib/testing/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/contrib/testing/manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/contrib/testing/mocks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/contrib/testing/tasks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/contrib/testing/worker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/events/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/events/cursesmon.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/events/dispatcher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/events/dumper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/events/event.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/events/receiver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/events/snapshot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/events/state.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/fixups/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/fixups/django.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/loaders/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/loaders/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/loaders/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/loaders/default.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/local.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/platforms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/result.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/schedules.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/security/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/security/certificate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/security/key.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/security/serialization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/security/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/signals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/states.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/abstract.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/collections.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/debug.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/deprecated.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/dispatch/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/dispatch/signal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/functional.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/graph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/imports.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/iso8601.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/nodenames.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/objects.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/saferepr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/serialization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/static/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/static/celery_128.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/sysinfo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/term.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/text.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/threads.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/time.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/utils/timer2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/autoscale.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/components.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/consumer/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/consumer/agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/consumer/connection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/consumer/consumer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/consumer/control.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/consumer/events.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/consumer/gossip.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/consumer/heart.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/consumer/mingle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/consumer/tasks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/control.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/heartbeat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/loops.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/pidbox.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/state.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/strategy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/celery/worker/worker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_didyoumean-0.3.1.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_didyoumean-0.3.1.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_didyoumean-0.3.1.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_didyoumean-0.3.1.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_didyoumean-0.3.1.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_didyoumean/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_plugins-1.1.1.dist-info/AUTHORS.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_plugins-1.1.1.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_plugins-1.1.1.dist-info/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_plugins-1.1.1.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_plugins-1.1.1.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_plugins-1.1.1.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_plugins-1.1.1.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_plugins-1.1.1.dist-info/zip-safe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_plugins/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_plugins/core.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_repl-0.3.0.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_repl-0.3.0.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_repl-0.3.0.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_repl-0.3.0.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_repl-0.3.0.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_repl-0.3.0.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_repl/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_repl/_completer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_repl/_repl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_repl/exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/click_repl/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu-5.3.7.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu-5.3.7.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu-5.3.7.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu-5.3.7.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu-5.3.7.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu-5.3.7.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/abstract.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/asynchronous/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/asynchronous/aws/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/asynchronous/aws/connection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/asynchronous/aws/ext.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/asynchronous/aws/sqs/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/asynchronous/aws/sqs/connection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/asynchronous/aws/sqs/ext.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/asynchronous/aws/sqs/message.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/asynchronous/aws/sqs/queue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/asynchronous/debug.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/asynchronous/http/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/asynchronous/http/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/asynchronous/http/curl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/asynchronous/hub.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/asynchronous/semaphore.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/asynchronous/timer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/clocks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/compat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/compression.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/connection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/entity.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/matcher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/message.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/messaging.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/mixins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/pidbox.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/pools.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/resource.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/serialization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/simple.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/SLMQ.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/SQS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/azureservicebus.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/azurestoragequeues.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/confluentkafka.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/consul.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/etcd.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/filesystem.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/librabbitmq.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/memory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/mongodb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/pyamqp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/pyro.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/qpid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/redis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/sqlalchemy/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/sqlalchemy/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/virtual/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/virtual/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/virtual/exchange.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/transport/zookeeper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/amq_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/collections.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/compat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/debug.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/div.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/encoding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/eventio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/functional.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/imports.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/json.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/limits.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/objects.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/scheduling.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/text.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/time.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/url.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/kombu/utils/uuid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit-3.0.47.dist-info/AUTHORS.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit-3.0.47.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit-3.0.47.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit-3.0.47.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit-3.0.47.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit-3.0.47.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit-3.0.47.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/application/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/application/application.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/application/current.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/application/dummy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/application/run_in_terminal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/auto_suggest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/buffer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/cache.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/clipboard/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/clipboard/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/clipboard/in_memory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/clipboard/pyperclip.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/completion/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/completion/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/completion/deduplicate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/completion/filesystem.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/completion/fuzzy_completer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/completion/nested.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/completion/word_completer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/contrib/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/contrib/completers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/contrib/completers/system.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/contrib/regular_languages/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/contrib/regular_languages/compiler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/contrib/regular_languages/completion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/contrib/regular_languages/lexer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/contrib/regular_languages/regex_parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/contrib/regular_languages/validation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/contrib/ssh/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/contrib/ssh/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/contrib/telnet/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/contrib/telnet/log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/contrib/telnet/protocol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/contrib/telnet/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/cursor_shapes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/data_structures.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/document.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/enums.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/eventloop/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/eventloop/async_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/eventloop/inputhook.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/eventloop/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/eventloop/win32.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/filters/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/filters/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/filters/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/filters/cli.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/filters/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/formatted_text/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/formatted_text/ansi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/formatted_text/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/formatted_text/html.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/formatted_text/pygments.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/formatted_text/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/history.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/input/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/input/ansi_escape_sequences.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/input/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/input/defaults.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/input/posix_pipe.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/input/posix_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/input/typeahead.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/input/vt100.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/input/vt100_parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/input/win32.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/input/win32_pipe.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/bindings/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/bindings/auto_suggest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/bindings/basic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/bindings/completion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/bindings/cpr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/bindings/emacs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/bindings/focus.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/bindings/mouse.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/bindings/named_commands.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/bindings/open_in_editor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/bindings/page_navigation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/bindings/scroll.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/bindings/search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/bindings/vi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/defaults.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/digraphs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/emacs_state.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/key_bindings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/key_processor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/key_binding/vi_state.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/keys.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/layout/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/layout/containers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/layout/controls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/layout/dimension.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/layout/dummy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/layout/layout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/layout/margins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/layout/menus.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/layout/mouse_handlers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/layout/processors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/layout/screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/layout/scrollable_pane.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/layout/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/lexers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/lexers/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/lexers/pygments.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/mouse_events.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/output/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/output/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/output/color_depth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/output/conemu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/output/defaults.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/output/flush_stdout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/output/plain_text.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/output/vt100.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/output/win32.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/output/windows10.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/patch_stdout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/py.typed" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/renderer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/selection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/shortcuts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/shortcuts/dialogs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/shortcuts/progress_bar/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/shortcuts/progress_bar/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/shortcuts/progress_bar/formatters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/shortcuts/prompt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/shortcuts/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/styles/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/styles/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/styles/defaults.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/styles/named_colors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/styles/pygments.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/styles/style.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/styles/style_transformation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/token.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/validation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/widgets/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/widgets/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/widgets/dialogs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/widgets/menus.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/widgets/toolbars.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/prompt_toolkit/win32_types.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/vine-5.1.0.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/vine-5.1.0.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/vine-5.1.0.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/vine-5.1.0.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/vine-5.1.0.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/vine-5.1.0.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/vine/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/vine/abstract.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/vine/funtools.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/vine/promises.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/vine/synchronization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/vine/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/wcwidth-0.2.13.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/wcwidth-0.2.13.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/wcwidth-0.2.13.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/wcwidth-0.2.13.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/wcwidth-0.2.13.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/wcwidth-0.2.13.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/wcwidth-0.2.13.dist-info/zip-safe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/wcwidth/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/wcwidth/table_vs16.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/wcwidth/table_wide.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/wcwidth/table_zero.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/wcwidth/unicode_versions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/lib/python3.11/site-packages/wcwidth/wcwidth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/escolas/templates/estudantes/mensalidadepagamento_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/estudantes/migrations/0002_aluno_ativo_alter_aluno_ano_saida_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/funcionarios/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/funcionarios/migrations/0007_funcionario_contrato.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/funcionarios/migrations/0008_funcionario_ativo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/funcionarios/migrations/0009_rename_ativo_funcionario_ativo_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/funcionarios/templates/funcionarios/funcionario_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/recibos/2024-05 Recibo Vencimento - Ana Margarida Guedes Almeida.numbers" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/recibos/2024-05 Recibo Vencimento - Ana Margarida Guedes Almeida.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/restart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/js/entradasSaidas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staticfiles/js/jquery.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/core/templates/core/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/core/templates/core/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/escolas/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/core/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/documentos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/documentos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/escolas/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/escolas/templates/escolas/atividades_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/templates/escolas/atividades_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/escolas/templates/escolas/atividades_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/templates/escolas/atividades_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/escolas/templates/mensalidadePagamento/mensalidadepagamento_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/templates/mensalidadePagamento/mensalidadepagamento_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/escolas/templates/escolas/mensalidade_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/templates/escolas/mensalidade_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/escolas/templates/mensalidade_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/templates/mensalidade_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/escolas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/escolas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/escolas/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0002_alter_aluno_ano_matricula_alter_aluno_ano_saida_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0003_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0004_alter_aluno_ano_matricula_alter_aluno_ano_saida_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0005_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0006_alter_aluno_ano_matricula_alter_aluno_ano_saida_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0007_alter_aluno_ano_matricula_alter_aluno_ano_saida_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0008_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0009_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0010_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0011_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0012_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0013_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0014_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0015_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0016_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0017_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0018_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0019_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0020_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0021_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0022_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0023_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0024_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0025_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0026_mensalidadepagamento_escola_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0027_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0028_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0029_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0030_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0031_aluno_contacto_aluno_enc_educacao_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0032_rename_contacto_aluno_contato_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0033_mensalidadepagamento_atraso_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0034_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0035_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0036_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0037_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0038_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0039_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0040_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0041_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0042_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0043_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0044_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/migrations/0045_alter_aluno_ano_matricula_alter_aluno_ano_saida.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/estudantes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/templates/estudantes/aluno_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/templates/estudantes/aluno_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/templates/estudantes/aluno_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/templates/estudantes/aluno_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/estudantes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/estudantes/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/funcionarios/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/funcionarios/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/funcionarios/templates/funcionarios/funcionario_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/funcionarios/templates/funcionarios/funcionario_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/funcionarios/templates/funcionarios/funcionario_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/funcionarios/templates/funcionarios/funcionario_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/funcionarios/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/funcionarios/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/funcionarios/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/funcionarios/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gestao/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/gestao/templates/gestao/despesas_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/templates/gestao/despesas_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gestao/templates/gestao/entradas_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/templates/gestao/entradas_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gestao/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gestao/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/salarios/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/salarios/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/salarios/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/salarios/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/salarios/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/salarios/signals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/salarios/templates/salarios/salarios_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/salarios/templates/salarios/salarios_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/salarios/templates/salarios/salarios_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/salarios/templates/salarios/salarios_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/salarios/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/salarios/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/salarios/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/salarios/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/associacao/celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/associacao/celery.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/associacao/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/associacao/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/associacao/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/associacao/tasks.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/media/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/media/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/resultados.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/resultados.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/bootstrap/css/bootstrap.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/staticfiles/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +640,9 @@
     &quot;accountId&quot;: &quot;4b40607e-840c-4e65-bef6-78e74b3dcd77&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/static/css/resultados.css" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -79,33 +657,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.makemigrations.executor&quot;: &quot;Run&quot;,
-    &quot;Python.migrate.executor&quot;: &quot;Run&quot;,
-    &quot;Python.runserver 8080.executor&quot;: &quot;Run&quot;,
-    &quot;Python.runserver.executor&quot;: &quot;Run&quot;,
-    &quot;Python.views.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ricardosousa/Desktop/django/Associacao/django_assoc/staticfiles&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.makemigrations.executor": "Run",
+    "Python.migrate.executor": "Run",
+    "Python.runserver 8080.executor": "Run",
+    "Python.runserver.executor": "Run",
+    "Python.views.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/ricardosousa/Desktop/django/Associacao/django_assoc/staticfiles",
+    "settings.editor.selected.configurable": "configurable.group.tools"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/staticfiles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/images" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/apps/escolas/templates/mensalidadePagamento" />
       <recent name="$PROJECT_DIR$/apps/escolas/templates" />
       <recent name="$PROJECT_DIR$/apps/escolas" />
-      <recent name="$PROJECT_DIR$/apps/escolas/templates/escolas" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.runserver 8080">
+  <component name="RunManager" selected="Python.migrate">
     <configuration name="makemigrations" type="PythonConfigurationType" factoryName="Python">
       <module name="django_assoc" />
       <option name="ENV_FILES" value="" />

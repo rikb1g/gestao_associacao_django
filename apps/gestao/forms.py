@@ -11,7 +11,7 @@ class FormDespesas(forms.ModelForm):
             'ficheiro': forms.FileInput(attrs={'class':'form-control'}),
             'descricao': forms.TextInput(attrs={'class':'form-control'}),
             'valor': forms.NumberInput(attrs={'class':'form-control'}),
-            'data': forms.DateInput(attrs={'type': 'date'})
+            'data': forms.DateInput(attrs={'type': 'date','class':'form-control'})
         }
     
 

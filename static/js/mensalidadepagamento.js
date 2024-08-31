@@ -23,11 +23,23 @@ select_ano.value = inicioAnoLetivo
 localStorage.setItem('select_mes',mes_atual_portugues)
 localStorage.setItem('select_ano', inicioAnoLetivo)
   
-  
+
   
 }) 
-  
-  
+
+}
+function salvarValorSelecionado(){
+    var select_ano = document.getElementById('ano')
+    var select_mes = document.getElementById('mes')
+
+    var valor_selecionado_mes = select_mes.value
+    var valor_selecionado_ano  = select_ano.value
+
+
+    localStorage.setItem('valor_selecionado_mes', valor_selecionado_mes)
+    localStorage.setItem('valor_selecionado_ano', valor_selecionado_ano)
+
+}
   
   // Função para obter o valor de um cookie pelo nome
 
@@ -81,18 +93,7 @@ function atualizarMensalidade(mensalidadeId) {
     }
 }
 
-function salvarValorSelecionado(){
-    var select_ano = document.getElementById('ano')
-    var select_mes = document.getElementById('mes')
-    
-    var valor_selecionado_mes = select_mes.value
-    var valor_selecionado_ano  = select_ano.value
 
-
-    localStorage.setItem('valor_selecionado_mes', valor_selecionado_mes)
-    localStorage.setItem('valor_selecionado_ano', valor_selecionado_ano)
-    
-}
 
 window.onload = function(){
     var valor_salvo_mes = localStorage.getItem('valor_selecionado_mes')
@@ -120,4 +121,24 @@ function obterAnoLetivo(mes, ano){
     }
 }
 
+
+// funçao ajax para atualizar select
+
+document.getElementById('form-filter').addEventListener('submit', function(event){
+event.preventDefault();
+
+var form = this;
+var formData = new FormData(form);
+
+    fetch(form.action, {
+    method: form.method,
+    body: formData,
+        })
+.then(response => response.text())
+.then(data => {
+    document.querySelector('.some-container').innerHTML = data;
+})
+.catch(error => console.error("Erro ao filtera", error));
+
+})
 

@@ -1,11 +1,13 @@
 from typing import Any
 from django.db.models.query import QuerySet
 from django.forms import BaseModelForm
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
+from django.views import View
 from django.views.generic import ListView, CreateView
 from .models import Salarios
 from .forms import FormSalarios
+from apps.funcionarios.models import Funcionario
 # Create your views here.
 
 
@@ -42,3 +44,16 @@ def eliminar_salario(request,pk):
     salario_eliminar.delete()
 
     return redirect("salarios_list")
+
+
+class GetFuncionarioSalario(View):
+    def get(self, request, *args, **kwargs):
+        funcionario_id = request.GET.get('funcionario_id')
+        if funcionario_id:
+            try:
+                funcionario = Funcionario.objects.get(id=funcionario_id)
+                salario = funcionario.salario  # Assumindo que o campo salário existe no modelo Funcionario
+                return JsonResponse({'salario': salario})
+            except Funcionario.DoesNotExist:
+                return JsonResponse({'salario': None})
+        return JsonResponse({'salario': None})

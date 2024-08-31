@@ -3,15 +3,20 @@
 {% block main %}
 
 
+<div class="container text-center mt-5">
 
-<form method="post" class="mt-5 form-control">
+
+<form method="post" class="form-control">
+    <h1 class="text-center mt-5">Editar Nome</h1>
     {% csrf_token %}
         {{ form }}
     <button type="submit" class="btn btn-primary">Salvar</button>
     </form>
 
-<h1 class="text-center">Mensalidades Atuais</h1>
+<h1 class="text-center mt-5">Mensalidades Atuais</h1>
+</div>
 
+<div class="container">
 <div class="dgv">
     <div class="resultado">
         <div class="titulos">
@@ -41,11 +46,13 @@
 </div>
         {% endfor %}
 </div>
-    <a href="{% url 'criar_mensalide' %}" class="btn btn-info">Nova Mensalidade</a>
+
 </div>
 
 <br>
 
+<a href="{% url 'criar_mensalide' %}" class="btn btn-info">Nova Mensalidade</a>
+</div>
 
 
 

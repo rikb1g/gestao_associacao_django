@@ -7,8 +7,6 @@ from django.urls import reverse
 class Escola(models.Model):
     nome = models.CharField(max_length=100)
 
-
-
     def __str__(self):
         return self.nome
 

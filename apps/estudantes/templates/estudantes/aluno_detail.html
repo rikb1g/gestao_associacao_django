@@ -1,10 +1,42 @@
 {% extends 'base.html' %}
 
-
+{% load static %}
 {% block main %}
 
+<p class="fs-1 text-center mt-5">Estudantes</p>
+<nav class="navbar navbar-expand-lg bg-body-tertiary mt-3">
+    <div class="container-fluid">
+        <a href="{% url 'alunos_list' %}" class="navbar-brand">Lista de Alunos</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'aluno_new' %}">Novo Aluno</a>
+                </li>
+                <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gerir Alunos
+          </a>
+                <ul class="dropdown-menu">
+                    <li><a href="{% url 'atividades_list' %}" class="dropdown-item">Lista de atividades</a></li>
+                    <li><a href="{% url 'atividade_new' %}" class="dropdown-item">Nova Atividade</a></li>
+                    <li><a href="{% url 'aluno_historic' %}" class="dropdown-item">Histórico de alunos</a></li>
+
+                </ul>
+
+            </ul>
+
+            <form class="d-flex justify-content-end" method="get" action="{% url 'alunos_list' %}">
+                <input type="text" name="query_alunos" value="{{ query_alunos }}" placeholder="Pesquisar aluno">
+                <button type="submit" class="btn btn-info">Pesquisar</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
 <div class="container text-center">
-    
+        <div></div>
         <div class="mt-5">
             <p><strong>Nome:</strong> {{ aluno_detail.nome }}</p>
             <p><strong>Escola:</strong> {{ aluno_detail.escola }}</p>
@@ -15,7 +47,7 @@
             <p><strong>Contato:</strong>{{ aluno_detail.nome }}</p>
             
         </div>
-     
+     <div></div>
 
 </div>
 

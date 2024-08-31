@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block main %}
-{% block navegadorfunc %}
+
 <p class="fs-1 text-center mt-5">Funcionários</p>
 <nav class="navbar navbar-expand-lg bg-body-tertiary mt-3">
     <div class="container-fluid">
@@ -23,6 +23,7 @@
                     <li><a href="{% url 'salarios_list' %}" class="dropdown-item">Recibos</a></li>
                     <li><a href="{% url 'escaloes_list' %}" class="dropdown-item">Escalões IRS</a></li>
                     <li><a href="{% url 'update_escola' user.utilizador.escola.id  %}" class="dropdown-item">Segurança Social</a></li>
+                    <li><a href="{% url 'historic_funcionario' %}" class="dropdown-item">Histórico Funcionários</a></li>
 
                 </ul>
 
@@ -36,7 +37,7 @@
     </div>
 </nav>
 
-{% endblock %}
+
 
 <div class="dgv">
 
@@ -50,11 +51,13 @@
         <div class="titulo c6">Operações</div>
 
     </div>
+    {% if funcionario_list %}
     {% for funcionario in funcionario_list %}
+    
     <div class="dados">
         <div class="linhadados">
             <div class="coluna c1">{{ funcionario.id}}</div>
-            <div class="coluna c2">{{ funcionario.nome }}</div>
+            <div class="coluna c2"><a href="{% url 'detail_funcionario' funcionario.id %}">{{ funcionario.nome }}</a></div>
             <div class="coluna c3">{{ funcionario.horas_contrato}}</div>
             <div class="coluna c4">{{ funcionario.salario }}</div>
             <div class="coluna c5">{{ funcionario.funcao }}</div>
@@ -69,15 +72,54 @@
 
     </div>
     {% endfor %}
+    {% endif %}
+    {% if historic_funcionario_list %}
+    {% for funcionario in historic_funcionario_list %}
+    
+    <div class="dados">
+        <div class="linhadados">
+            <div class="coluna c1">{{ funcionario.id}}</div>
+            <div class="coluna c2"><a href="{% url 'detail_funcionario' funcionario.id %}">{{ funcionario.nome }}</a></div>
+            <div class="coluna c3">{{ funcionario.horas_contrato}}</div>
+            <div class="coluna c4">{{ funcionario.salario }}</div>
+            <div class="coluna c5">{{ funcionario.funcao }}</div>
+            <div class="coluna c6">
+                <div>
+                    <a onclick="exibirPopUPConfirmacao('{{funcionario.id}}', '{{funcionario.nome}}');"><img src="{% static 'images/delete.svg' %}" alt=""></a>
+                    <a href="{% url 'update_funcionario' funcionario.id %}"><img src="{% static 'images/edit.svg' %}" alt=""></a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+    {% endif %}
 
 </div>
 
 
 </div>
-
+{% if messages %}
+  <div class="messages">
+    {% for message in messages %}
+      <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+        {{ message }}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
 <script src="{% static '/js/mensalidadepagamento.js' %}"></script>
 
 <script>
+setTimeout(function() {
+      var alerts = document.querySelectorAll('.alert');
+      alerts.forEach(function(alert) {
+        alert.classList.add('hidden');
+      });
+    }, 1000);
+
+
 function exibirPopUPConfirmacao(id, nome){
     if (confirm("Tem a certeza que pretende eliminar Funionario/a "+nome+" ?")){
         window.location.href = "/funcionarios/eliminar/" + id + "/";

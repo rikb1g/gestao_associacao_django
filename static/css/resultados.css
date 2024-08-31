@@ -70,3 +70,8 @@
 .verde {
     color: green;
 }
+
+.img-cur {
+    cursor: pointer !important;
+
+}

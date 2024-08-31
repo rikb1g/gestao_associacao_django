@@ -1,32 +1,40 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title_menu %}
-{% endblock %}
-
 {% block main %}
 
 
-<div class="container mt-5" >
-    <div class="row">
-        <div class="col ms-5">
-            <a href="{% url 'aluno_new' %}" class="btn btn-info me-4">Novo Aluno</a>
-            <a href="{% url 'atividades_list' %}" class="btn btn-info me-4">Atividades</a>
+<p class="fs-1 text-center mt-5">Estudantes</p>
+<nav class="navbar navbar-expand-lg bg-body-tertiary mt-3">
+    <div class="container-fluid">
+        <a href="{% url 'alunos_list' %}" class="navbar-brand">Lista de Alunos</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'aluno_new' %}">Novo Aluno</a>
+                </li>
+                <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gerir Alunos
+          </a>
+                <ul class="dropdown-menu">
+                    <li><a href="{% url 'atividades_list' %}" class="dropdown-item">Lista de atividades</a></li>
+                    <li><a href="{% url 'atividade_new' %}" class="dropdown-item">Nova Atividade</a></li>
+                    <li><a href="{% url 'aluno_historic' %}" class="dropdown-item">Histórico de alunos</a></li>
 
+                </ul>
+
+            </ul>
+
+            <form class="d-flex justify-content-end" method="get" action="{% url 'alunos_list' %}">
+                <input type="text" name="query_alunos" value="{{ query_alunos }}" placeholder="Pesquisar aluno">
+                <button type="submit" class="btn btn-info">Pesquisar</button>
+            </form>
         </div>
-        <div class="col"></div>
-        <div class="col">
-            <div class="d-flex justify-content-end">
-        <form method="GET" action="{% url 'alunos_list' %}">
-    <input type="text" name="query" value="{{ query }}" placeholder="Pesquisar aluno">
-    <button type="submit" class="btn btn-info">Pesquisar</button>
-</form>
     </div>
-        </div>
-    </div>
-
-</div>
-
+</nav>
 
 
 
@@ -36,14 +44,14 @@
             <div class="titulo c1">ID</div>
             <div class="titulo c2">Nome</div>
             <div class="titulo c3">Ano Matrícula</div>
-            <div class="titulo c4">Ano Termo</div>
-            <div class="titulo c5">Atividades</div>
-            <div class="titulo c6">Operações</div>
+            <div class="titulo c4">Atividades</div>
+            <div class="titulo c5">Operações</div>
         </div>
 
 
-
+        {% if tipo_lista == 'ativos' %}
         {% for aluno in alunos_list %}
+
 
        
         <div class="dados">
@@ -51,14 +59,8 @@
                 <div class="coluna c1">{{ aluno.id }}</div>
                 <div class="coluna c2"><a href="{% url 'aluno_detail' aluno.id %}">{{ aluno.nome}}</a></div>
                 <div class="coluna c3">{{ aluno.ano_matricula }}</div>
-                <div class="coluna c4">{% if aluno.ano_saida %}
-                    {{ aluno.ano_saida }}
-                    {% else %}
-
-                    {% endif %}
-                </div>
-                <div class="coluna c5">
-                    {% if aluno.atividade.all %}
+                <div class="coluna c4">
+                     {% if aluno.atividade.all %}
                     {% for atividade in aluno.atividade.all %}
                           {{ atividade.nome }}
                           |
@@ -67,13 +69,23 @@
 
                     {% endif %}
                 </div>
-                <div class="coluna c6">
-                    <div>
+                <div class="coluna c5">
+                   <div>
                 <a onclick="exibirPopUPConfirmacao('{{ aluno.id }}', '{{ aluno.nome }}');">
-                    <img src="{% static 'images/delete.svg' %}"></a>
-                        <a href="{% url 'aluno_edit' aluno.id %}"><img src="{% static 'images/edit.svg' %}"></a>
-                
+                    <img style="cursor: pointer;" title="Eliminar {{ aluno.nome }}"  src="{% static 'images/delete.svg' %}"></a>
+
+                        <a href="{% url 'aluno_edit' aluno.id %}"><img src="{% static 'images/edit.svg' %}" title="Editar {{ aluno.nome }}"></a>
+
+                       <a onclick="exibirPopUpConfirmacaoRenovaMatricula('{{aluno.id}}', '{{ aluno.nome}}');">
+                           <img src="{% static 'images/restart.svg' %}" title="Renovar matrícula {{ aluno.nome }}"></a>
+
+
+                       <a onclick="exibirPopUpConfirmacaoTermoMatric('{{ aluno.id }}', '{{ aluno.nome }}');">
+                           <img style="cursor: pointer;" src="{% static 'images/close.svg' %}" title="Anular matrícula {{ aluno.nome }}"></a>
                     </div>
+                </div>
+                <div class="coluna c6">
+
 
                 </div>
 
@@ -85,9 +97,59 @@
 
         {% endfor %}
 
+        {% else  %}
+
+        {% for aluno in historic_alunos %}
+
+
+
+        <div class="dados">
+            <div class="linhadados">
+                <div class="coluna c1">{{ aluno.id }}</div>
+                <div class="coluna c2"><a href="{% url 'aluno_detail' aluno.id %}">{{ aluno.nome}}</a></div>
+                <div class="coluna c3">{{ aluno.ano_matricula }} - {{ aluno.ano_saida }}</div>
+                <div class="coluna c4">
+                     {% if aluno.atividade.all %}
+                    {% for atividade in aluno.atividade.all %}
+                          {{ atividade.nome }}
+                          |
+                    {% endfor %}
+                    {% else  %}
+
+                    {% endif %}
+                </div>
+                <div class="coluna c5">
+                   <div>
+                <a onclick="exibirPopUPConfirmacao('{{ aluno.id }}', '{{ aluno.nome }}');">
+                    <img style="cursor: pointer;" title="Eliminar {{ aluno.nome }}"  src="{% static 'images/delete.svg' %}"></a>
+
+                       <a href=""><img src="{% static 'images/restart.svg' %}" title="Reativar matrícula {{ aluno.nome }}"></a>
+                    </div>
+                </div>
+                <div class="coluna c6">
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+        {% endfor %}
+
+        {% endif %}
+
+
+
 
 
     </div>
+</div>
+
+<div>
+
 </div>
 <script>
 function exibirPopUPConfirmacao(id, nome) {
@@ -95,6 +157,20 @@ function exibirPopUPConfirmacao(id, nome) {
         window.location.href = "/alunos/eliminar/" + id + "/";
     }
 }
+
+function exibirPopUpConfirmacaoTermoMatric (id, nome) {
+    if (confirm("Tem a certeza que pretende terminar a matricula de " + nome + "?")) {
+        window.location.href = "/alunos/removerMatricula/" + id + "/";
+    }
+  }
+
+
+function exibirPopUpConfirmacaoRenovaMatricula(id, nome){
+    if (confirm("Confirma a renovação da matrícula para o próximo ano letivo de " + nome + "?")){
+        window.location.href = "/alunos/renovarMatricula/"+id+ "/";
+    }
+
+    }
 </script>
 
 

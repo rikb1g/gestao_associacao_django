@@ -6,29 +6,25 @@ from apps.escolas.models import Escola, Atividades, Mensalidade
 from django.core.validators import MinValueValidator
 from django.utils import timezone
 
-# Create your models here.
-
-def validate_year(value):
-    if value < 1000 or value > 9999:
-        raise ValidationError("O ano deve estar entre 1900 e 2100.")
-
-class AnoField(models.IntegerField):
-    default_validators = [validate_year]
-
+class AnoField(models.CharField):
     def __init__(self, *args, **kwargs):
-        kwargs['validators'] = kwargs.get('validators',[]) + [validate_year]
+        kwargs['max_length'] = 4  # Definindo o comprimento máximo para 4 caracteres
+        kwargs['blank'] = True  # Permitir valores em branco
+        kwargs['null'] = True  # Permitir valores nulos
         super().__init__(*args, **kwargs)
 
 
 class Aluno(models.Model):
     nome = models.CharField(max_length=100,)
     escola = models.ForeignKey(Escola, on_delete=models.PROTECT)
-    ano_matricula = AnoField()
-    ano_saida = AnoField(null=True,blank=True)
+    ano_matricula = models.CharField(max_length=4)
+    ano_saida = models.IntegerField(blank=True, null=True)
     contato = models.CharField(max_length=20,blank=True)
     enc_educacao = models.CharField(max_length=100, blank=True,verbose_name= "Encarregado de Educação")
     atividade = models.ManyToManyField(Atividades, blank=True)
     mensalidade = models.ManyToManyField(Mensalidade)
+    ativo = models.BooleanField(default=True)
+    atraso = models.BooleanField(default=False)
 
 
     def calcular_valor_mensalidade(self):

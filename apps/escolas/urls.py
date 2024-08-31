@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import (EditEscola, CriarEscola, CreateMensalidade,AtividadesList,AtividadeNew,remover_atividade,
-                    AtividadeEdit,MensalidadeList,MensaliadeEdit,remover_mensalidade, atualizar_mensalidade_aluno)
+                    AtividadeEdit,MensalidadeList,MensaliadeEdit,remover_mensalidade, atualizar_mensalidade_aluno, MensalidadeAtraso)
 
 urlpatterns = [
     path("criarEscola",CriarEscola.as_view(), name= "create_escola"),
@@ -14,7 +14,7 @@ urlpatterns = [
     path('editarMensalidade/<int:pk>/',MensaliadeEdit.as_view(),name='mensalidade_base_update'),
     path('removerMensalidade/<int:pk>/',remover_mensalidade,name='mensalidade_remove'),
     path('atualizarMensalidadeAluno/<int:mensalidade_id>/',atualizar_mensalidade_aluno,name='atualizar_mensalidade_aluno'),
-    path('mensalidadeAtraso',MensalidadeList.as_view(),name='mensalidade_atraso'),# falta criar função#
+    path('mensalidadeAtraso',MensalidadeAtraso.as_view(),name='mensalidade_atraso'),# falta criar função#
     path('mensalidadeAluno',MensalidadeList.as_view(),name='mensalidade_aluno'),# falta criar função#
 
 ]

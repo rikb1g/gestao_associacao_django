@@ -11,19 +11,19 @@ from apps.funcionarios.models import Funcionario
 class FormSalarios(forms.ModelForm):
     def __init__(self,*args, **kwargs):
         escola = kwargs.pop('escola',None)
-        super(FormSalarios,self).__init__(*args,**kwargs)
+        super().__init__(*args,**kwargs)
         if escola:
-            self.fields['funcionario'].queryset = Funcionario.objects.filter(escola= escola)
+            self.fields['funcionario'].queryset = Funcionario.objects.filter(escola= escola,ativo=True)
 
     class Meta:
         model = Salarios
         fields = ['funcionario', 'data_inicio', 'data_fim', 'falta', 'valor']  
         widgets = {
-            'funcionario': forms.Select(attrs={'class':'form-control'}),
+            'funcionario': forms.Select(attrs={'class':'form-control','id': 'id_funcionario'}),
             'data_inicio': forms.DateInput(attrs={'type':'date', 'class':'form-control'}),
             'data_fim': forms.DateInput(attrs={'type':'date', 'class':'form-control'}),
             'falta': forms.NumberInput(attrs={'class': 'form-control'}),
-            'valor': forms.NumberInput(attrs={'class': 'form-control','class': 'valor'}),
+            'valor': forms.NumberInput(attrs={'class': 'form-control','class': 'valor','id': 'id_valor'}),
 
         }
         

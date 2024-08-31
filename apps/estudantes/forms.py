@@ -1,25 +1,34 @@
 from django import forms
 from django.contrib import admin
-from .models import Aluno, Mensalidade
+import re
+from .models import Aluno, Mensalidade, Atividades
+
+
 
 class AlunoForm(forms.ModelForm):
+    def __init__(self,*args, **kwargs):
+        escola = kwargs.pop('escola',None)
+        super().__init__(*args,**kwargs)
+        if escola:
+            self.fields['atividade'].queryset = Atividades.objects.filter(escola=escola)
+            self.fields['mensalidade'].queryset = Mensalidade.objects.filter(escola=escola)
+        if not Atividades.objects.filter(escola=escola):
+            self.fields['atividade'].empty_label = "Nenhuma atividade"
+        
     class Meta:
         model = Aluno
-        fields = ['nome','escola','ano_matricula','ano_saida','atividade','enc_educacao', 'contato']
+        fields = ['nome','ano_matricula','ano_saida','atividade','mensalidade','enc_educacao', 'contato']
+        
+        widgets = {
+            'nome': forms.TextInput(attrs={'class':'form-control'}),
+            'ano_matricula': forms.TextInput(attrs={'class':'form-control'}),
+            'ano_saida': forms.TextInput(attrs={'class':'form-control'}),
+            'atividade': forms.SelectMultiple(attrs={'class':'form-control'}),
+            'mensalidade': forms.SelectMultiple(attrs={'class':'form-control'}),
+            'enc_educacao': forms.TextInput(attrs={'class':'form-control'}),
+            'contato': forms.TextInput(attrs={'class':'form-control'}),
+        }
     
-    def __init__(self, user, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['escola'].disabled = True
-        self.initial['escola'] = user.utilizador.escola
-
-    def save(self,commit=True):
-        instance = super().save(commit=commit)
-        if commit:
-
-            instance.save()
-
-        return instance
-
 
 class AlunoAdmin(admin.ModelAdmin):
     form = AlunoForm

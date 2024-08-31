@@ -3,6 +3,7 @@ import datetime
 import json
 
 from django.contrib import messages
+from django.db.models.query import QuerySet
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, JsonResponse
 from django.urls import reverse_lazy
@@ -10,6 +11,7 @@ from django.views.generic import ListView, CreateView, UpdateView
 
 from .models import Escola, Mensalidade, Atividades
 from apps.estudantes.models import MensalidadePagamento, Aluno
+from .forms import AtividadeForm
 
 
 class CriarEscola(CreateView):
@@ -60,7 +62,7 @@ class CreateMensalidade(CreateView):
 class CreateAtividade(CreateView):
     model = Atividades
     fields = ['nome', 'valor']
-    success_url = 'atividades_list'
+    success_url = reverse_lazy('atividades_list')
 
     def form_valid(self, form):
         atividade = form.save(commit=False)
@@ -93,8 +95,8 @@ class AtividadesList(ListView):
 
 class AtividadeNew(CreateView):
     model = Atividades
-    fields = ['nome','valor']
-    success_url = 'atividades_list'
+    form_class = AtividadeForm
+    success_url = reverse_lazy('atividades_list')
 
     def form_valid(self, form):
         atividade = form.save(commit=False)
@@ -107,7 +109,7 @@ class AtividadeNew(CreateView):
         return self.render_to_response(self.get_context_data(form=form))
 
     def get_absolute_url(self):
-        redirect('alunos_list')
+        reverse_lazy('atividades_list')
 
 
 def remover_atividade(request, pk):
@@ -117,7 +119,7 @@ def remover_atividade(request, pk):
 
 class AtividadeEdit(UpdateView):
     model = Atividades
-    fields = ['nome', 'escola','valor']
+    form_class = AtividadeForm
     success_url = reverse_lazy('atividades_list')
 
 
@@ -183,6 +185,7 @@ class MensaliadeEdit(UpdateView):
 
 
 def remover_mensalidade(request, pk):
+    dir(request)
     mensalidade_eliminar = get_object_or_404(Mensalidade, pk=pk)
     mensalidade_eliminar.delete()
     return redirect('mensalidade_list')
@@ -211,3 +214,26 @@ def atualizar_mensalidade_aluno(request, mensalidade_id):
 
 
 
+
+
+class MensalidadeAtraso(ListView):
+    model = MensalidadePagamento
+    context_object_name = 'mensalidadeAtraso'
+
+    def get_queryset(self):
+        escola = self.request.user.utilizador.escola
+        context = MensalidadePagamento.objects.filter(escola=escola ,paga=False,atraso =False)
+        return context
+
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        ano_inicial = 2023
+        anos_letivos = range(ano_inicial, ano_inicial + 10)
+        context['anos_letivos'] = anos_letivos
+        context['meses'] = MESES
+
+        alunos = Aluno.objects.all()
+        context['alunos'] = alunos
+
+        return context

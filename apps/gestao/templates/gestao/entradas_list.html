@@ -44,28 +44,26 @@
         <div class="col-4"></div>
         <div class="col-4"></div>
         <div class="col-4">
-            <form method="get" class="form-container d-flex align-items-center">
+            <form id="form-filter" method="GET" class="form-container d-flex align-items-center">
                 <div class="d-flex flex-column ms-3">
                     <label>Mês</label>
-                    <select id="mes" name="mes" class="form-select form-select-sm mb-3"
-                        aria-label="Small select example" onchange="salvarValorSelecionado()">
+                    <select id="mes" name="mes" class="form-select form-select-sm mb-3" aria-label="Small select example" onchange="salvarValorSelecionado()">
                         {% for mes in meses %}
-                        <option value="{{ mes }}">{{ mes }}</option>
+                            <option value="{{ mes }}">{{ mes }}</option>
                         {% endfor %}
                     </select>
                 </div>
                 <div class="d-flex flex-column ms-3"> <!-- Adicione margem à esquerda para separar os selects -->
                     <label for="ano">Ano letivo</label>
-                    <select id="ano" name="ano" class="form-select form-select-sm mb-3"
-                        aria-label="Small select example">
+                    <select id="ano" name="ano" class="form-select form-select-sm mb-3" aria-label="Small select example"onchange="salvarValorSelecionado()">
                         {% for ano in anos_letivos %}
-                        <option value="{{ano}}">{{ano}}/{{ano|add:1}}</option>
+                            <option value="{{ano}}">{{ano}}/{{ano|add:1}}</option>
                         {% endfor %}
                     </select>
 
                 </div>
                 <button type="submit" class="btn btn-info ms-3 ">Filtrar</button>
-
+                 
             </form>
         </div>
     </div>

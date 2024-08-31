@@ -30,19 +30,30 @@ def criar_recibo(sender, instance, created, **kwargs):
 @receiver(post_save,sender=Salarios)
 def calcular_salario(sender,instance, created, **kwargs):
     if created:
-        print(instance.valor)
+        print(type(instance.funcionario.horas_contrato))
+        salario = float(instance.funcionario.salario)
+        print(salario)
+        print(type(salario))
+        print(f"instance.funcionario.horas_contrato {instance.funcionario.horas_contrato}")
+        valor_hora = (salario * 12)/ (52 * instance.funcionario.horas_contrato)
+        print(f"final {valor_hora}")
+
         if instance.funcionario.duodecimos :
-            duodecimos = (instance.funcionario.salario / 12) * 2
-            salario_sem_descontos = duodecimos + instance.valor
-            seg_social = salario_sem_descontos * Decimal("0.11")
-            salario_final = salario_sem_descontos - seg_social
+            duodecimos = (salario/ 12) * 2
+            salario_sem_descontos = duodecimos + float(instance.valor)
+            print(salario_sem_descontos)
+            print("aqui")
+            seg_social = salario_sem_descontos * 0.11
+            faltas = float(instance.falta) * valor_hora
+            salario_final = salario_sem_descontos - seg_social - faltas
             print(salario_final)
+            
             escola= instance.funcionario.escola
             data = date.today()
             try:
                 tipo_despesa = TipoDespesa.objects.get(nome="Ordenado")
             
-                processar_despesa = Despesas(tipo= tipo_despesa,valor = salario_final,escola = escola,data = data,descricao= f"Salario {instance.funcionario.nome}")
+                processar_despesa = Despesas(tipo= tipo_despesa,valor = salario_final,escola = escola,data = data,descricao= f"Salario {instance.funcionario.nome} mês {instance.data_fim}")
                 processar_despesa.save()
 
             
@@ -51,18 +62,14 @@ def calcular_salario(sender,instance, created, **kwargs):
                 novo_tipo.save()
                 print("Nao encontrou tipo despesa")
 
-                processar_despesa = Despesas(tipo = novo_tipo,valor = salario_final,escola = escola, data = data,descricao= f"Salario {instance.funcionario.nome}")
+                processar_despesa = Despesas(tipo = novo_tipo,valor = salario_final,escola = escola, data = data,descricao= f"Salario {instance.funcionario.nome} mês {instance.data_fim}")
                 processar_despesa.save()
                 print("Gravou com sucesso")
 
         else:
-
-            print("Sem duodecimos")
-            salario_iliquido = instance.valor
-            print(salario_iliquido)
-            seg_social = salario_iliquido * Decimal('0.11')
-            print(seg_social)
-            
+            salario_iliquido = float(instance.valor)
+            faltas = float(instance.falta) * valor_hora
+            seg_social = salario_iliquido * 0.11
             salario_final = salario_iliquido - seg_social
             salario_final = round(salario_final, 2)
             escola = instance.funcionario.escola
@@ -70,7 +77,7 @@ def calcular_salario(sender,instance, created, **kwargs):
             
             try:
                 tipo_despesa = TipoDespesa.objects.get(nome="Ordenado")
-                processar_despesa = Despesas(tipo= tipo_despesa,valor = salario_final,descricao= f"Salario {instance.funcionario.nome}",escola = escola, data = data)
+                processar_despesa = Despesas(tipo= tipo_despesa,valor = salario_final,descricao= f"Salario {instance.funcionario.nome} mês {instance.data_fim}",escola = escola, data = data)
                 processar_despesa.save()
                 print("Encontrou tipo despesa")
             except ObjectDoesNotExist:

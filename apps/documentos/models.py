@@ -11,3 +11,4 @@ class RecibosVencimento(models.Model):
 
     def __str__(self) -> str:
         return f"{self.funcionario} de {self.data}."
+    

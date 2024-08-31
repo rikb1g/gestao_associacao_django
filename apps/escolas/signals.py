@@ -8,7 +8,6 @@ from django.dispatch import receiver
 
 @receiver(post_save, sender=MensalidadePagamento)
 def inserir_valor_mensalidade(sender, instance, created, **kwargs):
-    print("deu")
     if not created:
         try:
             original_instance = sender.objects.get(pk=instance.pk)
