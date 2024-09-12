@@ -33,8 +33,7 @@ def verificar_mensalidade_em_atraso():
             for mensalidade in mensalidade_atrao:
                 mensalidade.atraso = True
                 mensalidade.save()
-    
-            
+
             mes_atual -= 1
         
         mes_atual = 8
